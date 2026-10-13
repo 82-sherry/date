@@ -1,0 +1,7295 @@
+{
+  "summary": {
+    "date": "2026-10-13",
+    "raw_browser_checks": 98,
+    "effective_checks": 88,
+    "effective_outcomes": {
+      "通过": 79,
+      "未执行": 6,
+      "受限": 3
+    },
+    "excel_rows": 15385,
+    "columns": 11,
+    "sheets": 1,
+    "row_status_counts": {
+      "无法核验": 4437,
+      "部分符合": 9481,
+      "待核验": 1182,
+      "不适用": 4,
+      "符合": 83,
+      "未发现匹配": 198
+    },
+    "by_requirement": {
+      "12": {
+        "无法核验": 660
+      },
+      "17": {
+        "部分符合": 216,
+        "待核验": 214,
+        "不适用": 2
+      },
+      "18": {
+        "部分符合": 618,
+        "符合": 41
+      },
+      "19": {
+        "无法核验": 508,
+        "符合": 1,
+        "不适用": 1
+      },
+      "20": {
+        "部分符合": 1816,
+        "符合": 9,
+        "待核验": 106,
+        "未发现匹配": 37
+      },
+      "21": {
+        "部分符合": 2218,
+        "符合": 6,
+        "未发现匹配": 161,
+        "待核验": 56,
+        "无法核验": 1834
+      },
+      "22": {
+        "部分符合": 1454,
+        "符合": 8,
+        "待核验": 19
+      },
+      "23": {
+        "部分符合": 679,
+        "待核验": 433,
+        "符合": 6,
+        "无法核验": 262,
+        "不适用": 1
+      },
+      "24": {
+        "部分符合": 37
+      },
+      "25": {
+        "部分符合": 1384,
+        "符合": 6
+      },
+      "26": {
+        "部分符合": 957,
+        "待核验": 87,
+        "符合": 5
+      },
+      "27": {
+        "部分符合": 52,
+        "无法核验": 238
+      },
+      "28": {
+        "部分符合": 50,
+        "无法核验": 237
+      },
+      "29": {
+        "待核验": 267
+      },
+      "30": {
+        "无法核验": 698,
+        "符合": 1
+      }
+    },
+    "limits": [
+      "98次浏览器检查（含复核和未执行判断）不能等同于15385项场景全部执行",
+      "部分符合仅表示有对应组件或基础行为，本场景尚未完整验证",
+      "未登录；未执行上传、保存、生成计算等写操作",
+      "没有按所有候选恶意输入、异常响应与布局场景模拟数据",
+      "原清单中不适用场景已标出，未用数量目标强行认定符合"
+    ]
+  },
+  "rubric": {
+    "符合": "实际执行且关键预期一致",
+    "部分符合": "有可见组件或基础行为，但本行特定场景未完整验证",
+    "无法核验": "受登录、样本或运行条件限制",
+    "待核验": "对应具体组件尚未定位",
+    "未发现匹配": "本轮公開页面没有定位此候选功能，不是断言全系统没有",
+    "不适用": "场景与组件类型不适用",
+    "不符合": "实际执行未达到预期"
+  },
+  "effective_checks": [
+    {
+      "id": "CHK-0001",
+      "page": "home",
+      "key": "page_load",
+      "description": "页面与业务内容加载",
+      "outcome": "通过",
+      "detail": "检查HTTP状态与业务标题；不是仅检查端口或PID",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0001"
+    },
+    {
+      "id": "CHK-0002",
+      "page": "paper",
+      "key": "page_load",
+      "description": "页面与业务内容加载",
+      "outcome": "通过",
+      "detail": "检查HTTP状态与业务标题；不是仅检查端口或PID",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0002"
+    },
+    {
+      "id": "CHK-0003",
+      "page": "paper",
+      "key": "pagination_next",
+      "description": "翻到第二页并检查页码与内容变化",
+      "outcome": "通过",
+      "detail": "当前页为2且内容发生变化",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0003"
+    },
+    {
+      "id": "CHK-0004",
+      "page": "paper",
+      "key": "pagination_first",
+      "description": "返回第一页",
+      "outcome": "通过",
+      "detail": "检查当前页恢复为1",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0004"
+    },
+    {
+      "id": "CHK-0005",
+      "page": "paper",
+      "key": "expand",
+      "description": "展开内容并显示收起入口",
+      "outcome": "通过",
+      "detail": "检查内容变化与收起按钮",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0005"
+    },
+    {
+      "id": "CHK-0006",
+      "page": "paper",
+      "key": "collapse",
+      "description": "收起展开内容",
+      "outcome": "通过",
+      "detail": "检查展开入口恢复",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0006"
+    },
+    {
+      "id": "CHK-0007",
+      "page": "paper",
+      "key": "query",
+      "description": "输入科技情报并执行查询",
+      "outcome": "通过",
+      "detail": "检查真实查询请求包含测试词并收到成功响应；不因此证明语义相关性",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0007"
+    },
+    {
+      "id": "CHK-0008",
+      "page": "paper",
+      "key": "query_clear",
+      "description": "清空查询后的页面可用性",
+      "outcome": "通过",
+      "detail": "只检查清空后页面仍可用；默认查询规则未判定",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0008"
+    },
+    {
+      "id": "CHK-0009",
+      "page": "patent",
+      "key": "page_load",
+      "description": "页面与业务内容加载",
+      "outcome": "通过",
+      "detail": "检查HTTP状态与业务标题；不是仅检查端口或PID",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0009"
+    },
+    {
+      "id": "CHK-0010",
+      "page": "patent",
+      "key": "pagination_next",
+      "description": "翻到第二页并检查页码与内容变化",
+      "outcome": "通过",
+      "detail": "当前页为2且内容发生变化",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0010"
+    },
+    {
+      "id": "CHK-0011",
+      "page": "patent",
+      "key": "pagination_first",
+      "description": "返回第一页",
+      "outcome": "通过",
+      "detail": "检查当前页恢复为1",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0011"
+    },
+    {
+      "id": "CHK-0012",
+      "page": "patent",
+      "key": "expand",
+      "description": "展开内容并显示收起入口",
+      "outcome": "通过",
+      "detail": "检查内容变化与收起按钮",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0012"
+    },
+    {
+      "id": "CHK-0013",
+      "page": "patent",
+      "key": "collapse",
+      "description": "收起展开内容",
+      "outcome": "通过",
+      "detail": "检查展开入口恢复",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0013"
+    },
+    {
+      "id": "CHK-0014",
+      "page": "patent",
+      "key": "query",
+      "description": "输入科技情报并执行查询",
+      "outcome": "通过",
+      "detail": "检查真实查询请求包含测试词并收到成功响应；不因此证明语义相关性",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0014"
+    },
+    {
+      "id": "CHK-0015",
+      "page": "patent",
+      "key": "query_clear",
+      "description": "清空查询后的页面可用性",
+      "outcome": "通过",
+      "detail": "只检查清空后页面仍可用；默认查询规则未判定",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0015"
+    },
+    {
+      "id": "CHK-0016",
+      "page": "scholar",
+      "key": "page_load",
+      "description": "页面与业务内容加载",
+      "outcome": "通过",
+      "detail": "检查HTTP状态与业务标题；不是仅检查端口或PID",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0016"
+    },
+    {
+      "id": "CHK-0017",
+      "page": "scholar",
+      "key": "pagination_next",
+      "description": "翻到第二页并检查页码与内容变化",
+      "outcome": "通过",
+      "detail": "当前页为2且内容发生变化",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0017"
+    },
+    {
+      "id": "CHK-0018",
+      "page": "scholar",
+      "key": "pagination_first",
+      "description": "返回第一页",
+      "outcome": "通过",
+      "detail": "检查当前页恢复为1",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0018"
+    },
+    {
+      "id": "CHK-0019",
+      "page": "scholar",
+      "key": "query",
+      "description": "输入科技情报并执行查询",
+      "outcome": "通过",
+      "detail": "检查真实查询请求包含测试词并收到成功响应；不因此证明语义相关性",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0019"
+    },
+    {
+      "id": "CHK-0020",
+      "page": "scholar",
+      "key": "query_clear",
+      "description": "清空查询后的页面可用性",
+      "outcome": "通过",
+      "detail": "只检查清空后页面仍可用；默认查询规则未判定",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0020"
+    },
+    {
+      "id": "CHK-0021",
+      "page": "journal",
+      "key": "page_load",
+      "description": "页面与业务内容加载",
+      "outcome": "通过",
+      "detail": "检查HTTP状态与业务标题；不是仅检查端口或PID",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0021"
+    },
+    {
+      "id": "CHK-0022",
+      "page": "journal",
+      "key": "pagination_next",
+      "description": "翻到第二页并检查页码与内容变化",
+      "outcome": "通过",
+      "detail": "当前页为2且内容发生变化",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0022"
+    },
+    {
+      "id": "CHK-0023",
+      "page": "journal",
+      "key": "pagination_first",
+      "description": "返回第一页",
+      "outcome": "通过",
+      "detail": "检查当前页恢复为1",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0023"
+    },
+    {
+      "id": "CHK-0001",
+      "page": "journal",
+      "key": "query",
+      "description": "输入科技情报并执行查询",
+      "outcome": "通过",
+      "detail": "检查真实查询请求包含测试词并收到成功响应；不因此证明语义相关性",
+      "kind": "functional",
+      "evidence_id": "followups.json#CHK-0001"
+    },
+    {
+      "id": "CHK-0002",
+      "page": "journal",
+      "key": "query_clear",
+      "description": "清空查询后的页面可用性",
+      "outcome": "通过",
+      "detail": "只检查清空后页面仍可用；默认查询规则未判定",
+      "kind": "functional",
+      "evidence_id": "followups.json#CHK-0002"
+    },
+    {
+      "id": "CHK-0026",
+      "page": "organization",
+      "key": "page_load",
+      "description": "页面与业务内容加载",
+      "outcome": "通过",
+      "detail": "检查HTTP状态与业务标题；不是仅检查端口或PID",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0026"
+    },
+    {
+      "id": "CHK-0027",
+      "page": "organization",
+      "key": "pagination_next",
+      "description": "翻到第二页并检查页码与内容变化",
+      "outcome": "通过",
+      "detail": "当前页为2且内容发生变化",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0027"
+    },
+    {
+      "id": "CHK-0028",
+      "page": "organization",
+      "key": "pagination_first",
+      "description": "返回第一页",
+      "outcome": "通过",
+      "detail": "检查当前页恢复为1",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0028"
+    },
+    {
+      "id": "CHK-0029",
+      "page": "organization",
+      "key": "query",
+      "description": "输入科技情报并执行查询",
+      "outcome": "通过",
+      "detail": "检查真实查询请求包含测试词并收到成功响应；不因此证明语义相关性",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0029"
+    },
+    {
+      "id": "CHK-0030",
+      "page": "organization",
+      "key": "query_clear",
+      "description": "清空查询后的页面可用性",
+      "outcome": "通过",
+      "detail": "只检查清空后页面仍可用；默认查询规则未判定",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0030"
+    },
+    {
+      "id": "CHK-0031",
+      "page": "information",
+      "key": "page_load",
+      "description": "页面与业务内容加载",
+      "outcome": "通过",
+      "detail": "检查HTTP状态与业务标题；不是仅检查端口或PID",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0031"
+    },
+    {
+      "id": "CHK-0032",
+      "page": "information",
+      "key": "pagination_next",
+      "description": "翻到第二页并检查页码与内容变化",
+      "outcome": "通过",
+      "detail": "当前页为2且内容发生变化",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0032"
+    },
+    {
+      "id": "CHK-0033",
+      "page": "information",
+      "key": "pagination_first",
+      "description": "返回第一页",
+      "outcome": "通过",
+      "detail": "检查当前页恢复为1",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0033"
+    },
+    {
+      "id": "CHK-0034",
+      "page": "information",
+      "key": "expand",
+      "description": "展开内容并显示收起入口",
+      "outcome": "通过",
+      "detail": "检查内容变化与收起按钮",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0034"
+    },
+    {
+      "id": "CHK-0035",
+      "page": "information",
+      "key": "collapse",
+      "description": "收起展开内容",
+      "outcome": "通过",
+      "detail": "检查展开入口恢复",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0035"
+    },
+    {
+      "id": "CHK-0036",
+      "page": "information",
+      "key": "query",
+      "description": "输入科技情报并执行查询",
+      "outcome": "通过",
+      "detail": "检查真实查询请求包含测试词并收到成功响应；不因此证明语义相关性",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0036"
+    },
+    {
+      "id": "CHK-0037",
+      "page": "information",
+      "key": "query_clear",
+      "description": "清空查询后的页面可用性",
+      "outcome": "通过",
+      "detail": "只检查清空后页面仍可用；默认查询规则未判定",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0037"
+    },
+    {
+      "id": "CHK-0038",
+      "page": "paper-detail",
+      "key": "page_load",
+      "description": "详情主体加载",
+      "outcome": "通过",
+      "detail": "核对目标实体标题与主体内容",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0038"
+    },
+    {
+      "id": "CHK-0039",
+      "page": "paper-detail",
+      "key": "pagination_next",
+      "description": "翻到第二页",
+      "outcome": "未执行",
+      "detail": "当前样本无可见第二页",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0039"
+    },
+    {
+      "id": "CHK-0040",
+      "page": "paper-detail",
+      "key": "expand",
+      "description": "展开阅读",
+      "outcome": "未执行",
+      "detail": "未定位当前样本的展开按钮",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0040"
+    },
+    {
+      "id": "CHK-0041",
+      "page": "paper-detail",
+      "key": "login_gate",
+      "description": "智能解析与溯源未登录限制",
+      "outcome": "通过",
+      "detail": "当前未登录，仅验证访问限制展示",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0041"
+    },
+    {
+      "id": "CHK-0042",
+      "page": "paper-detail",
+      "key": "tab_参考文献",
+      "description": "切换参考文献",
+      "outcome": "通过",
+      "detail": "入口可激活；结果准确性另查",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0042"
+    },
+    {
+      "id": "CHK-0043",
+      "page": "paper-detail",
+      "key": "tab_被引文献",
+      "description": "切换被引文献",
+      "outcome": "通过",
+      "detail": "入口可激活；结果准确性另查",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0043"
+    },
+    {
+      "id": "CHK-0044",
+      "page": "patent-detail",
+      "key": "page_load",
+      "description": "详情主体加载",
+      "outcome": "通过",
+      "detail": "核对目标实体标题与主体内容",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0044"
+    },
+    {
+      "id": "CHK-0045",
+      "page": "patent-detail",
+      "key": "pagination_next",
+      "description": "翻到第二页",
+      "outcome": "未执行",
+      "detail": "当前样本无可见第二页",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0045"
+    },
+    {
+      "id": "CHK-0046",
+      "page": "patent-detail",
+      "key": "expand",
+      "description": "展开内容并显示收起入口",
+      "outcome": "通过",
+      "detail": "检查内容变化与收起按钮",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0046"
+    },
+    {
+      "id": "CHK-0047",
+      "page": "patent-detail",
+      "key": "collapse",
+      "description": "收起展开内容",
+      "outcome": "通过",
+      "detail": "检查展开入口恢复",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0047"
+    },
+    {
+      "id": "CHK-0048",
+      "page": "scholar-detail",
+      "key": "page_load",
+      "description": "详情主体加载",
+      "outcome": "通过",
+      "detail": "核对目标实体标题与主体内容",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0048"
+    },
+    {
+      "id": "CHK-0001",
+      "page": "scholar-detail",
+      "key": "pagination_page2_diagnosis",
+      "description": "学者详情第二页复核",
+      "outcome": "通过",
+      "detail": "记录第二页真实页码与内容变化；详情证据保存为diagnose-scholar-page2.txt",
+      "kind": "functional",
+      "evidence_id": "diagnosis.json#CHK-0001"
+    },
+    {
+      "id": "CHK-0016",
+      "page": "scholar-detail",
+      "key": "pagination_first",
+      "description": "返回第一页",
+      "outcome": "通过",
+      "detail": "检查当前页恢复为1",
+      "kind": "functional",
+      "evidence_id": "followups.json#CHK-0016"
+    },
+    {
+      "id": "CHK-0051",
+      "page": "scholar-detail",
+      "key": "expand",
+      "description": "展开内容并显示收起入口",
+      "outcome": "通过",
+      "detail": "检查内容变化与收起按钮",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0051"
+    },
+    {
+      "id": "CHK-0052",
+      "page": "scholar-detail",
+      "key": "collapse",
+      "description": "收起展开内容",
+      "outcome": "通过",
+      "detail": "检查展开入口恢复",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0052"
+    },
+    {
+      "id": "CHK-0053",
+      "page": "scholar-detail",
+      "key": "migration_open",
+      "description": "打开职业迁徙视图",
+      "outcome": "受限",
+      "detail": "入口触发统一认证；未登录且SSO域未加载，未核验授权后的内容",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0053"
+    },
+    {
+      "id": "CHK-0003",
+      "page": "journal-detail",
+      "key": "page_load",
+      "description": "详情主体及只读统计加载",
+      "outcome": "通过",
+      "detail": "已正确允许列表及统计读取接口",
+      "kind": "functional",
+      "evidence_id": "followups.json#CHK-0003"
+    },
+    {
+      "id": "CHK-0004",
+      "page": "journal-detail",
+      "key": "pagination_next",
+      "description": "翻到第二页并检查页码与内容变化",
+      "outcome": "通过",
+      "detail": "当前页为2且内容发生变化",
+      "kind": "functional",
+      "evidence_id": "followups.json#CHK-0004"
+    },
+    {
+      "id": "CHK-0011",
+      "page": "organization-detail",
+      "key": "page_load",
+      "description": "详情主体及只读统计加载",
+      "outcome": "通过",
+      "detail": "已正确允许列表及统计读取接口",
+      "kind": "functional",
+      "evidence_id": "followups.json#CHK-0011"
+    },
+    {
+      "id": "CHK-0012",
+      "page": "organization-detail",
+      "key": "pagination_next",
+      "description": "翻到第二页",
+      "outcome": "未执行",
+      "detail": "当前样本无可见第二页",
+      "kind": "functional",
+      "evidence_id": "followups.json#CHK-0012"
+    },
+    {
+      "id": "CHK-0058",
+      "page": "search-paper",
+      "key": "home_search",
+      "description": "首页搜索导航与结果加载",
+      "outcome": "通过",
+      "detail": "真实输入科技情报，检查结果路由及结果/空态",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0058"
+    },
+    {
+      "id": "CHK-0062",
+      "page": "search-paper",
+      "key": "pagination_next",
+      "description": "翻到第二页并检查页码与内容变化",
+      "outcome": "通过",
+      "detail": "当前页为2且内容发生变化",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0062"
+    },
+    {
+      "id": "CHK-0063",
+      "page": "search-paper",
+      "key": "pagination_first",
+      "description": "返回第一页",
+      "outcome": "通过",
+      "detail": "检查当前页恢复为1",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0063"
+    },
+    {
+      "id": "CHK-0061",
+      "page": "search-paper",
+      "key": "search_mode",
+      "description": "切换论文检索",
+      "outcome": "通过",
+      "detail": "入口激活并记录结果区；未证明所有筛选维度已实现",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0061"
+    },
+    {
+      "id": "CHK-0064",
+      "page": "search-paper",
+      "key": "filter_option",
+      "description": "选择实际可见筛选选项",
+      "outcome": "通过",
+      "detail": "仅检查选项状态，结果过滤准确性未证明",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0064"
+    },
+    {
+      "id": "CHK-0065",
+      "page": "search-patent",
+      "key": "search_mode",
+      "description": "切换专利检索",
+      "outcome": "通过",
+      "detail": "入口激活并记录结果区；未证明所有筛选维度已实现",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0065"
+    },
+    {
+      "id": "CHK-0066",
+      "page": "search-patent",
+      "key": "pagination_next",
+      "description": "翻到第二页",
+      "outcome": "未执行",
+      "detail": "当前样本无可见第二页",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0066"
+    },
+    {
+      "id": "CHK-0067",
+      "page": "search-patent",
+      "key": "filter_option",
+      "description": "选择实际可见筛选选项",
+      "outcome": "通过",
+      "detail": "仅检查选项状态，结果过滤准确性未证明",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0067"
+    },
+    {
+      "id": "CHK-0068",
+      "page": "search-scholar",
+      "key": "search_mode",
+      "description": "切换学者检索",
+      "outcome": "通过",
+      "detail": "入口激活并记录结果区；未证明所有筛选维度已实现",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0068"
+    },
+    {
+      "id": "CHK-0069",
+      "page": "search-scholar",
+      "key": "pagination_next",
+      "description": "翻到第二页并检查页码与内容变化",
+      "outcome": "通过",
+      "detail": "当前页为2且内容发生变化",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0069"
+    },
+    {
+      "id": "CHK-0070",
+      "page": "search-scholar",
+      "key": "pagination_first",
+      "description": "返回第一页",
+      "outcome": "通过",
+      "detail": "检查当前页恢复为1",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0070"
+    },
+    {
+      "id": "CHK-0071",
+      "page": "search-scholar",
+      "key": "filter_option",
+      "description": "选择实际可见筛选选项",
+      "outcome": "通过",
+      "detail": "仅检查选项状态，结果过滤准确性未证明",
+      "kind": "functional",
+      "evidence_id": "audit_results.json#CHK-0071"
+    },
+    {
+      "id": "CHK-0005",
+      "page": "journal-detail",
+      "key": "pagination_first",
+      "description": "返回第一页",
+      "outcome": "通过",
+      "detail": "检查当前页恢复为1",
+      "kind": "functional",
+      "evidence_id": "followups.json#CHK-0005"
+    },
+    {
+      "id": "CHK-0006",
+      "page": "journal-detail",
+      "key": "ranking_国家地区分布排行榜",
+      "description": "排行模块可见",
+      "outcome": "通过",
+      "detail": "仅确认排行模块显示，指标准确性未全部验证",
+      "kind": "display",
+      "evidence_id": "followups.json#CHK-0006"
+    },
+    {
+      "id": "CHK-0007",
+      "page": "journal-detail",
+      "key": "ranking_机构分布排行榜",
+      "description": "排行模块可见",
+      "outcome": "通过",
+      "detail": "仅确认排行模块显示，指标准确性未全部验证",
+      "kind": "display",
+      "evidence_id": "followups.json#CHK-0007"
+    },
+    {
+      "id": "CHK-0008",
+      "page": "journal-detail",
+      "key": "ranking_研究主题分类排行榜",
+      "description": "排行模块可见",
+      "outcome": "通过",
+      "detail": "仅确认排行模块显示，指标准确性未全部验证",
+      "kind": "display",
+      "evidence_id": "followups.json#CHK-0008"
+    },
+    {
+      "id": "CHK-0009",
+      "page": "journal-detail",
+      "key": "ranking_高产作者排行榜",
+      "description": "排行模块可见",
+      "outcome": "通过",
+      "detail": "仅确认排行模块显示，指标准确性未全部验证",
+      "kind": "display",
+      "evidence_id": "followups.json#CHK-0009"
+    },
+    {
+      "id": "CHK-0010",
+      "page": "journal-detail",
+      "key": "ranking_高引作者排行榜",
+      "description": "排行模块可见",
+      "outcome": "通过",
+      "detail": "仅确认排行模块显示，指标准确性未全部验证",
+      "kind": "display",
+      "evidence_id": "followups.json#CHK-0010"
+    },
+    {
+      "id": "CHK-0013",
+      "page": "organization-detail",
+      "key": "ranking_高产作者排行榜",
+      "description": "排行模块可见",
+      "outcome": "通过",
+      "detail": "仅确认排行模块显示，指标准确性未全部验证",
+      "kind": "display",
+      "evidence_id": "followups.json#CHK-0013"
+    },
+    {
+      "id": "CHK-0014",
+      "page": "organization-detail",
+      "key": "ranking_高引作者排行榜",
+      "description": "排行模块可见",
+      "outcome": "通过",
+      "detail": "仅确认排行模块显示，指标准确性未全部验证",
+      "kind": "display",
+      "evidence_id": "followups.json#CHK-0014"
+    },
+    {
+      "id": "CHK-0017",
+      "page": "paper",
+      "key": "subscription_gate",
+      "description": "我的订阅未登录入口",
+      "outcome": "受限",
+      "detail": "入口触发统一认证；未登录且SSO域未加载，未核验授权后的内容",
+      "kind": "functional",
+      "evidence_id": "followups.json#CHK-0017"
+    },
+    {
+      "id": "CHK-0018",
+      "page": "information",
+      "key": "subscription_gate",
+      "description": "我的订阅未登录入口",
+      "outcome": "受限",
+      "detail": "入口触发统一认证；未登录且SSO域未加载，未核验授权后的内容",
+      "kind": "functional",
+      "evidence_id": "followups.json#CHK-0018"
+    },
+    {
+      "id": "CHK-0019",
+      "page": "information",
+      "key": "industry_人工智能",
+      "description": "切换资讯产业人工智能",
+      "outcome": "通过",
+      "detail": "真实请求成功；未逐条证明产业归属",
+      "kind": "functional",
+      "evidence_id": "followups.json#CHK-0019"
+    },
+    {
+      "id": "CHK-0020",
+      "page": "information",
+      "key": "industry_新材料",
+      "description": "切换资讯产业新材料",
+      "outcome": "通过",
+      "detail": "真实请求成功；未逐条证明产业归属",
+      "kind": "functional",
+      "evidence_id": "followups.json#CHK-0020"
+    },
+    {
+      "id": "CHK-0001",
+      "page": "scholar-detail",
+      "key": "pagination_page2_diagnosis",
+      "description": "学者详情第二页复核",
+      "outcome": "通过",
+      "detail": "记录第二页真实页码与内容变化；详情证据保存为diagnose-scholar-page2.txt",
+      "kind": "functional",
+      "evidence_id": "diagnosis.json#CHK-0001"
+    },
+    {
+      "id": "CHK-0002",
+      "page": "search-paper",
+      "key": "aggregate_expand",
+      "description": "展开聚合统计",
+      "outcome": "通过",
+      "detail": "确认聚合区域有可见图表；不是仅凭源码判定",
+      "kind": "functional",
+      "evidence_id": "diagnosis.json#CHK-0002"
+    },
+    {
+      "id": "CHK-0003",
+      "page": "search-patent",
+      "key": "aggregate_expand",
+      "description": "展开聚合统计",
+      "outcome": "通过",
+      "detail": "确认聚合区域有可见图表；不是仅凭源码判定",
+      "kind": "functional",
+      "evidence_id": "diagnosis.json#CHK-0003"
+    },
+    {
+      "id": "CHK-0004",
+      "page": "search-scholar",
+      "key": "aggregate_expand",
+      "description": "展开聚合统计",
+      "outcome": "未执行",
+      "detail": "未定位展开控件",
+      "kind": "functional",
+      "evidence_id": "diagnosis.json#CHK-0004"
+    },
+    {
+      "id": "CHK-0001",
+      "page": "information",
+      "key": "sort_options",
+      "description": "资讯排序候选展示",
+      "outcome": "通过",
+      "detail": "打开实际排序下拉，确认两个候选",
+      "kind": "functional",
+      "evidence_id": "sortcheck.json#CHK-0001"
+    },
+    {
+      "id": "CHK-0002",
+      "page": "information",
+      "key": "sort_asc",
+      "description": "资讯发布时间发布时间（正序）",
+      "outcome": "通过",
+      "detail": "对当前列表可见发布日期逐条检查顺序：['2022-05-07', '2022-09-27', '2022-11-30', '2022-12-13', '2023-09-19', '2023-09-20', '2023-09-20', '2023-09-20', '2023-09-20', '2023-09-21']",
+      "kind": "functional",
+      "evidence_id": "sortcheck.json#CHK-0002"
+    },
+    {
+      "id": "CHK-0003",
+      "page": "information",
+      "key": "sort_desc",
+      "description": "资讯发布时间发布时间（倒序）",
+      "outcome": "通过",
+      "detail": "对当前列表可见发布日期逐条检查顺序：['2024-04-17', '2024-04-07', '2024-04-04', '2024-04-03', '2024-04-01', '2024-04-01', '2024-03-29', '2024-03-29', '2024-03-28']",
+      "kind": "functional",
+      "evidence_id": "sortcheck.json#CHK-0003"
+    }
+  ],
+  "component_assessments": [
+    {
+      "component": "FE-0001",
+      "page": "首页",
+      "name": "系统名称",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "home.txt"
+    },
+    {
+      "component": "FE-0002",
+      "page": "首页",
+      "name": "检索引导说明",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "home.txt"
+    },
+    {
+      "component": "FE-0003",
+      "page": "首页",
+      "name": "智能理解查询意图",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "home.txt"
+    },
+    {
+      "component": "FE-0004",
+      "page": "首页",
+      "name": "多模态知识检索",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "home.txt"
+    },
+    {
+      "component": "FE-0005",
+      "page": "首页",
+      "name": "个性化推荐",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "home.txt"
+    },
+    {
+      "component": "FE-0006",
+      "page": "首页",
+      "name": "资源搜索输入框",
+      "status": "部分符合",
+      "reason": "可见搜索输入已定位；本行的特定输入、异常或恢复场景尚未完整验证",
+      "evidence": "home.txt"
+    },
+    {
+      "component": "FE-0007",
+      "page": "首页",
+      "name": "论文检索",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "home.txt"
+    },
+    {
+      "component": "FE-0008",
+      "page": "首页",
+      "name": "专利检索",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "home.txt"
+    },
+    {
+      "component": "FE-0009",
+      "page": "首页",
+      "name": "学者检索",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "home.txt"
+    },
+    {
+      "component": "FE-0010",
+      "page": "首页",
+      "name": "搜索按钮",
+      "status": "部分符合",
+      "reason": "实际搜索按钮已点击并进入结果页；本行其他状态和异常未完整验证",
+      "evidence": "home.txt"
+    },
+    {
+      "component": "FE-0011",
+      "page": "论文列表页",
+      "name": "标题",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0012",
+      "page": "论文列表页",
+      "name": "摘要",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0013",
+      "page": "论文列表页",
+      "name": "DOI",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0014",
+      "page": "论文列表页",
+      "name": "EISSN",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0015",
+      "page": "论文列表页",
+      "name": "所属期刊",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0016",
+      "page": "论文列表页",
+      "name": "引用次数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0017",
+      "page": "论文列表页",
+      "name": "结果总数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0018",
+      "page": "论文列表页",
+      "name": "发表年份",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0019",
+      "page": "论文列表页",
+      "name": "作者",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0020",
+      "page": "论文列表页",
+      "name": "关键词",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0021",
+      "page": "论文列表页",
+      "name": "关键词搜索",
+      "status": "部分符合",
+      "reason": "可见搜索输入已定位；本行的特定输入、异常或恢复场景尚未完整验证",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0022",
+      "page": "论文列表页",
+      "name": "结果分页",
+      "status": "部分符合",
+      "reason": "已定位分页组件；只验证了部分页码和内容变化，其他边界场景未执行",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0023",
+      "page": "论文列表页",
+      "name": "标题进入详情",
+      "status": "部分符合",
+      "reason": "已定位记录标题和对应详情路由；本轮没有重复执行本行所有标题入口状态",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0024",
+      "page": "论文列表页",
+      "name": "摘要展开收起",
+      "status": "部分符合",
+      "reason": "页面存在展开收起能力；仅对指定第一个内容区实测，本行其他场景未执行",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0025",
+      "page": "论文列表页",
+      "name": "发现推荐",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0026",
+      "page": "论文列表页",
+      "name": "我的订阅",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "paper.txt"
+    },
+    {
+      "component": "FE-0027",
+      "page": "论文列表页",
+      "name": "订阅管理入口",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-paper-subscription.txt"
+    },
+    {
+      "component": "FE-0028",
+      "page": "专利列表页",
+      "name": "标题",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0029",
+      "page": "专利列表页",
+      "name": "摘要",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0030",
+      "page": "专利列表页",
+      "name": "申请号",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0031",
+      "page": "专利列表页",
+      "name": "授权公告号",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0032",
+      "page": "专利列表页",
+      "name": "公开号",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0033",
+      "page": "专利列表页",
+      "name": "专利局",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0034",
+      "page": "专利列表页",
+      "name": "专利类型",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0035",
+      "page": "专利列表页",
+      "name": "法律状态",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0036",
+      "page": "专利列表页",
+      "name": "结果总数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0037",
+      "page": "专利列表页",
+      "name": "申请日期",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0038",
+      "page": "专利列表页",
+      "name": "公开日期",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0039",
+      "page": "专利列表页",
+      "name": "申请人",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0040",
+      "page": "专利列表页",
+      "name": "发明人",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0041",
+      "page": "专利列表页",
+      "name": "IPC分类",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0042",
+      "page": "专利列表页",
+      "name": "关键词搜索",
+      "status": "部分符合",
+      "reason": "可见搜索输入已定位；本行的特定输入、异常或恢复场景尚未完整验证",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0043",
+      "page": "专利列表页",
+      "name": "结果分页",
+      "status": "部分符合",
+      "reason": "已定位分页组件；只验证了部分页码和内容变化，其他边界场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0044",
+      "page": "专利列表页",
+      "name": "标题进入详情",
+      "status": "部分符合",
+      "reason": "已定位记录标题和对应详情路由；本轮没有重复执行本行所有标题入口状态",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0045",
+      "page": "专利列表页",
+      "name": "摘要展开收起",
+      "status": "部分符合",
+      "reason": "页面存在展开收起能力；仅对指定第一个内容区实测，本行其他场景未执行",
+      "evidence": "patent.txt"
+    },
+    {
+      "component": "FE-0046",
+      "page": "学者列表页",
+      "name": "中文姓名",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0047",
+      "page": "学者列表页",
+      "name": "英文姓名",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0048",
+      "page": "学者列表页",
+      "name": "当前职称",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0049",
+      "page": "学者列表页",
+      "name": "所属机构",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0050",
+      "page": "学者列表页",
+      "name": "使用语言",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0051",
+      "page": "学者列表页",
+      "name": "国家地区",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0052",
+      "page": "学者列表页",
+      "name": "H指数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0053",
+      "page": "学者列表页",
+      "name": "论文数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0054",
+      "page": "学者列表页",
+      "name": "引用量",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0055",
+      "page": "学者列表页",
+      "name": "结果总数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0056",
+      "page": "学者列表页",
+      "name": "研究兴趣",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0057",
+      "page": "学者列表页",
+      "name": "关键词搜索",
+      "status": "部分符合",
+      "reason": "可见搜索输入已定位；本行的特定输入、异常或恢复场景尚未完整验证",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0058",
+      "page": "学者列表页",
+      "name": "结果分页",
+      "status": "部分符合",
+      "reason": "已定位分页组件；只验证了部分页码和内容变化，其他边界场景未执行",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0059",
+      "page": "学者列表页",
+      "name": "标题进入详情",
+      "status": "部分符合",
+      "reason": "已定位记录标题和对应详情路由；本轮没有重复执行本行所有标题入口状态",
+      "evidence": "scholar.txt"
+    },
+    {
+      "component": "FE-0060",
+      "page": "期刊列表页",
+      "name": "名称",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal.txt"
+    },
+    {
+      "component": "FE-0061",
+      "page": "期刊列表页",
+      "name": "英文名称",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal.txt"
+    },
+    {
+      "component": "FE-0062",
+      "page": "期刊列表页",
+      "name": "学科分类",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal.txt"
+    },
+    {
+      "component": "FE-0063",
+      "page": "期刊列表页",
+      "name": "ISSN",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal.txt"
+    },
+    {
+      "component": "FE-0064",
+      "page": "期刊列表页",
+      "name": "EISSN",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal.txt"
+    },
+    {
+      "component": "FE-0065",
+      "page": "期刊列表页",
+      "name": "评价类型",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal.txt"
+    },
+    {
+      "component": "FE-0066",
+      "page": "期刊列表页",
+      "name": "评价值",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal.txt"
+    },
+    {
+      "component": "FE-0067",
+      "page": "期刊列表页",
+      "name": "结果总数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal.txt"
+    },
+    {
+      "component": "FE-0068",
+      "page": "期刊列表页",
+      "name": "关键词搜索",
+      "status": "部分符合",
+      "reason": "可见搜索输入已定位；本行的特定输入、异常或恢复场景尚未完整验证",
+      "evidence": "journal.txt"
+    },
+    {
+      "component": "FE-0069",
+      "page": "期刊列表页",
+      "name": "结果分页",
+      "status": "部分符合",
+      "reason": "已定位分页组件；只验证了部分页码和内容变化，其他边界场景未执行",
+      "evidence": "journal.txt"
+    },
+    {
+      "component": "FE-0070",
+      "page": "期刊列表页",
+      "name": "标题进入详情",
+      "status": "部分符合",
+      "reason": "已定位记录标题和对应详情路由；本轮没有重复执行本行所有标题入口状态",
+      "evidence": "journal.txt"
+    },
+    {
+      "component": "FE-0071",
+      "page": "机构列表页",
+      "name": "名称",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization.txt"
+    },
+    {
+      "component": "FE-0072",
+      "page": "机构列表页",
+      "name": "英文名称",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization.txt"
+    },
+    {
+      "component": "FE-0073",
+      "page": "机构列表页",
+      "name": "机构类型",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization.txt"
+    },
+    {
+      "component": "FE-0074",
+      "page": "机构列表页",
+      "name": "地址",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "organization.txt"
+    },
+    {
+      "component": "FE-0075",
+      "page": "机构列表页",
+      "name": "结果总数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization.txt"
+    },
+    {
+      "component": "FE-0076",
+      "page": "机构列表页",
+      "name": "创立年份",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization.txt"
+    },
+    {
+      "component": "FE-0077",
+      "page": "机构列表页",
+      "name": "关键词搜索",
+      "status": "部分符合",
+      "reason": "可见搜索输入已定位；本行的特定输入、异常或恢复场景尚未完整验证",
+      "evidence": "organization.txt"
+    },
+    {
+      "component": "FE-0078",
+      "page": "机构列表页",
+      "name": "结果分页",
+      "status": "部分符合",
+      "reason": "已定位分页组件；只验证了部分页码和内容变化，其他边界场景未执行",
+      "evidence": "organization.txt"
+    },
+    {
+      "component": "FE-0079",
+      "page": "机构列表页",
+      "name": "标题进入详情",
+      "status": "部分符合",
+      "reason": "已定位记录标题和对应详情路由；本轮没有重复执行本行所有标题入口状态",
+      "evidence": "organization.txt"
+    },
+    {
+      "component": "FE-0080",
+      "page": "资讯列表页",
+      "name": "标题",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0081",
+      "page": "资讯列表页",
+      "name": "摘要",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0082",
+      "page": "资讯列表页",
+      "name": "来源",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0083",
+      "page": "资讯列表页",
+      "name": "分类",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0084",
+      "page": "资讯列表页",
+      "name": "原文链接",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0085",
+      "page": "资讯列表页",
+      "name": "来源数量",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0086",
+      "page": "资讯列表页",
+      "name": "结果总数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0087",
+      "page": "资讯列表页",
+      "name": "发布时间",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0088",
+      "page": "资讯列表页",
+      "name": "关键词",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0089",
+      "page": "资讯列表页",
+      "name": "关键词搜索",
+      "status": "部分符合",
+      "reason": "可见搜索输入已定位；本行的特定输入、异常或恢复场景尚未完整验证",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0090",
+      "page": "资讯列表页",
+      "name": "结果分页",
+      "status": "部分符合",
+      "reason": "已定位分页组件；只验证了部分页码和内容变化，其他边界场景未执行",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0091",
+      "page": "资讯列表页",
+      "name": "原文链接",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0092",
+      "page": "资讯列表页",
+      "name": "摘要展开收起",
+      "status": "部分符合",
+      "reason": "页面存在展开收起能力；仅对指定第一个内容区实测，本行其他场景未执行",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0093",
+      "page": "资讯列表页",
+      "name": "发现推荐",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0094",
+      "page": "资讯列表页",
+      "name": "我的订阅",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0095",
+      "page": "资讯列表页",
+      "name": "订阅管理入口",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-information-subscription.txt"
+    },
+    {
+      "component": "FE-0096",
+      "page": "综合检索-论文页",
+      "name": "标题",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0097",
+      "page": "综合检索-论文页",
+      "name": "摘要",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0098",
+      "page": "综合检索-论文页",
+      "name": "DOI",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0099",
+      "page": "综合检索-论文页",
+      "name": "EISSN",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0100",
+      "page": "综合检索-论文页",
+      "name": "期刊",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0101",
+      "page": "综合检索-论文页",
+      "name": "引用量",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0102",
+      "page": "综合检索-论文页",
+      "name": "结果总数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0103",
+      "page": "综合检索-论文页",
+      "name": "发表年份",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0104",
+      "page": "综合检索-论文页",
+      "name": "作者",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0105",
+      "page": "综合检索-论文页",
+      "name": "关键词",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0106",
+      "page": "综合检索-论文页",
+      "name": "论文检索模式",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0107",
+      "page": "综合检索-论文页",
+      "name": "检索输入框",
+      "status": "部分符合",
+      "reason": "可见搜索输入已定位；本行的特定输入、异常或恢复场景尚未完整验证",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0108",
+      "page": "综合检索-论文页",
+      "name": "检索结果分页",
+      "status": "部分符合",
+      "reason": "已定位分页组件；只验证了部分页码和内容变化，其他边界场景未执行",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0109",
+      "page": "综合检索-论文页",
+      "name": "结果排序",
+      "status": "部分符合",
+      "reason": "页面存在对应排序区；本轮未逐项核验排序结果",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0110",
+      "page": "综合检索-论文页",
+      "name": "发表年份筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0111",
+      "page": "综合检索-论文页",
+      "name": "发表年份分布",
+      "status": "待核验",
+      "reason": "代码有统计线索，本轮未定位该具体图表或完整数据",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0112",
+      "page": "综合检索-论文页",
+      "name": "期刊筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0113",
+      "page": "综合检索-论文页",
+      "name": "期刊分布",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0114",
+      "page": "综合检索-论文页",
+      "name": "研究领域筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0115",
+      "page": "综合检索-论文页",
+      "name": "研究领域分布",
+      "status": "未发现匹配",
+      "reason": "只发现相关筛选维度，未定位与本行名称对应的独立分布图表",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0116",
+      "page": "综合检索-论文页",
+      "name": "机构筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0117",
+      "page": "综合检索-论文页",
+      "name": "机构分布",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0118",
+      "page": "综合检索-论文页",
+      "name": "重置筛选",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "component": "FE-0119",
+      "page": "综合检索-专利页",
+      "name": "标题",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0120",
+      "page": "综合检索-专利页",
+      "name": "摘要",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0121",
+      "page": "综合检索-专利页",
+      "name": "申请号",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0122",
+      "page": "综合检索-专利页",
+      "name": "授权公告号",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0123",
+      "page": "综合检索-专利页",
+      "name": "公开号",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0124",
+      "page": "综合检索-专利页",
+      "name": "专利局",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0125",
+      "page": "综合检索-专利页",
+      "name": "专利类型",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0126",
+      "page": "综合检索-专利页",
+      "name": "法律状态",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0127",
+      "page": "综合检索-专利页",
+      "name": "结果总数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0128",
+      "page": "综合检索-专利页",
+      "name": "申请日",
+      "status": "部分符合",
+      "reason": "对应文字在现场页面可见；尚未完成本行预期行为验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0129",
+      "page": "综合检索-专利页",
+      "name": "公开日",
+      "status": "部分符合",
+      "reason": "对应文字在现场页面可见；尚未完成本行预期行为验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0130",
+      "page": "综合检索-专利页",
+      "name": "申请人",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0131",
+      "page": "综合检索-专利页",
+      "name": "发明人",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0132",
+      "page": "综合检索-专利页",
+      "name": "IPC分类",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0133",
+      "page": "综合检索-专利页",
+      "name": "专利检索模式",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0134",
+      "page": "综合检索-专利页",
+      "name": "检索输入框",
+      "status": "部分符合",
+      "reason": "可见搜索输入已定位；本行的特定输入、异常或恢复场景尚未完整验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0135",
+      "page": "综合检索-专利页",
+      "name": "检索结果分页",
+      "status": "部分符合",
+      "reason": "已定位分页组件；只验证了部分页码和内容变化，其他边界场景未执行",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0136",
+      "page": "综合检索-专利页",
+      "name": "结果排序",
+      "status": "未发现匹配",
+      "reason": "本轮两个公开查询样本均未发现此模式的排序区，原条目是推导候选",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0137",
+      "page": "综合检索-专利页",
+      "name": "专利局筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0138",
+      "page": "综合检索-专利页",
+      "name": "专利局分布",
+      "status": "未发现匹配",
+      "reason": "只发现相关筛选维度，未定位与本行名称对应的独立分布图表",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0139",
+      "page": "综合检索-专利页",
+      "name": "专利类型筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0140",
+      "page": "综合检索-专利页",
+      "name": "专利类型分布",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0141",
+      "page": "综合检索-专利页",
+      "name": "IPC分类筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0142",
+      "page": "综合检索-专利页",
+      "name": "IPC分类分布",
+      "status": "待核验",
+      "reason": "代码有统计线索，本轮未定位该具体图表或完整数据",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0143",
+      "page": "综合检索-专利页",
+      "name": "公开日筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0144",
+      "page": "综合检索-专利页",
+      "name": "公开日分布",
+      "status": "未发现匹配",
+      "reason": "只发现相关筛选维度，未定位与本行名称对应的独立分布图表",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0145",
+      "page": "综合检索-专利页",
+      "name": "申请日筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0146",
+      "page": "综合检索-专利页",
+      "name": "申请日分布",
+      "status": "未发现匹配",
+      "reason": "只发现相关筛选维度，未定位与本行名称对应的独立分布图表",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0147",
+      "page": "综合检索-专利页",
+      "name": "申请人筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0148",
+      "page": "综合检索-专利页",
+      "name": "申请人分布",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0149",
+      "page": "综合检索-专利页",
+      "name": "发明人筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0150",
+      "page": "综合检索-专利页",
+      "name": "发明人分布",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0151",
+      "page": "综合检索-专利页",
+      "name": "重置筛选",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "search-patent.txt"
+    },
+    {
+      "component": "FE-0152",
+      "page": "综合检索-学者页",
+      "name": "姓名",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0153",
+      "page": "综合检索-学者页",
+      "name": "职称",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0154",
+      "page": "综合检索-学者页",
+      "name": "机构",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0155",
+      "page": "综合检索-学者页",
+      "name": "性别",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0156",
+      "page": "综合检索-学者页",
+      "name": "使用语言",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0157",
+      "page": "综合检索-学者页",
+      "name": "所属地区",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0158",
+      "page": "综合检索-学者页",
+      "name": "H指数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0159",
+      "page": "综合检索-学者页",
+      "name": "论文数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0160",
+      "page": "综合检索-学者页",
+      "name": "引用量",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0161",
+      "page": "综合检索-学者页",
+      "name": "结果总数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0162",
+      "page": "综合检索-学者页",
+      "name": "研究兴趣",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0163",
+      "page": "综合检索-学者页",
+      "name": "学者检索模式",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0164",
+      "page": "综合检索-学者页",
+      "name": "检索输入框",
+      "status": "部分符合",
+      "reason": "可见搜索输入已定位；本行的特定输入、异常或恢复场景尚未完整验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0165",
+      "page": "综合检索-学者页",
+      "name": "检索结果分页",
+      "status": "部分符合",
+      "reason": "已定位分页组件；只验证了部分页码和内容变化，其他边界场景未执行",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0166",
+      "page": "综合检索-学者页",
+      "name": "结果排序",
+      "status": "部分符合",
+      "reason": "页面存在对应排序区；本轮未逐项核验排序结果",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0167",
+      "page": "综合检索-学者页",
+      "name": "H指数筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0168",
+      "page": "综合检索-学者页",
+      "name": "H指数分布",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0169",
+      "page": "综合检索-学者页",
+      "name": "职称筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0170",
+      "page": "综合检索-学者页",
+      "name": "职称分布",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0171",
+      "page": "综合检索-学者页",
+      "name": "性别筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0172",
+      "page": "综合检索-学者页",
+      "name": "性别分布",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0173",
+      "page": "综合检索-学者页",
+      "name": "使用语言筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0174",
+      "page": "综合检索-学者页",
+      "name": "使用语言分布",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0175",
+      "page": "综合检索-学者页",
+      "name": "所属地区筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0176",
+      "page": "综合检索-学者页",
+      "name": "所属地区分布",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0177",
+      "page": "综合检索-学者页",
+      "name": "机构筛选",
+      "status": "部分符合",
+      "reason": "实际筛选维度已定位；部分选项状态已检查，结果准确性及组合场景未完整验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0178",
+      "page": "综合检索-学者页",
+      "name": "机构分布",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0179",
+      "page": "综合检索-学者页",
+      "name": "重置筛选",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "component": "FE-0180",
+      "page": "论文详情页",
+      "name": "标题",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0181",
+      "page": "论文详情页",
+      "name": "摘要",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0182",
+      "page": "论文详情页",
+      "name": "期刊",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0183",
+      "page": "论文详情页",
+      "name": "卷期页",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0184",
+      "page": "论文详情页",
+      "name": "DOI",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0185",
+      "page": "论文详情页",
+      "name": "EISSN",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0186",
+      "page": "论文详情页",
+      "name": "引用次数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0187",
+      "page": "论文详情页",
+      "name": "发表年份",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0188",
+      "page": "论文详情页",
+      "name": "作者姓名",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0189",
+      "page": "论文详情页",
+      "name": "作者机构",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0190",
+      "page": "论文详情页",
+      "name": "关键词",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0191",
+      "page": "论文详情页",
+      "name": "参考文献",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0192",
+      "page": "论文详情页",
+      "name": "被引文献",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0193",
+      "page": "论文详情页",
+      "name": "原文链接",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0194",
+      "page": "论文详情页",
+      "name": "摘要展开收起",
+      "status": "待核验",
+      "reason": "当前样本未提供对应展开内容，不能据此断言功能不存在",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0195",
+      "page": "论文详情页",
+      "name": "作者展开全部",
+      "status": "待核验",
+      "reason": "当前样本未提供对应展开内容，不能据此断言功能不存在",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0196",
+      "page": "论文详情页",
+      "name": "参考文献",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0197",
+      "page": "论文详情页",
+      "name": "被引文献",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0198",
+      "page": "专利详情页",
+      "name": "标题",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0199",
+      "page": "专利详情页",
+      "name": "摘要",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0200",
+      "page": "专利详情页",
+      "name": "申请号",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0201",
+      "page": "专利详情页",
+      "name": "授权公告号",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0202",
+      "page": "专利详情页",
+      "name": "专利类型",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0203",
+      "page": "专利详情页",
+      "name": "公开号",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0204",
+      "page": "专利详情页",
+      "name": "专利局",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0205",
+      "page": "专利详情页",
+      "name": "权利要求书",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0206",
+      "page": "专利详情页",
+      "name": "说明书",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0207",
+      "page": "专利详情页",
+      "name": "申请日期",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0208",
+      "page": "专利详情页",
+      "name": "公开日期",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0209",
+      "page": "专利详情页",
+      "name": "优先权日",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0210",
+      "page": "专利详情页",
+      "name": "申请人",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0211",
+      "page": "专利详情页",
+      "name": "发明人",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0212",
+      "page": "专利详情页",
+      "name": "受让人",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0213",
+      "page": "专利详情页",
+      "name": "优先权号",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0214",
+      "page": "专利详情页",
+      "name": "IPC分类号",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0215",
+      "page": "专利详情页",
+      "name": "CPC分类号",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0216",
+      "page": "专利详情页",
+      "name": "相关专利列表",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0217",
+      "page": "专利详情页",
+      "name": "摘要展开收起",
+      "status": "部分符合",
+      "reason": "页面存在展开收起能力；仅对指定第一个内容区实测，本行其他场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0218",
+      "page": "专利详情页",
+      "name": "权利要求展开收起",
+      "status": "部分符合",
+      "reason": "页面存在展开收起能力；仅对指定第一个内容区实测，本行其他场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0219",
+      "page": "专利详情页",
+      "name": "说明书展开收起",
+      "status": "部分符合",
+      "reason": "页面存在展开收起能力；仅对指定第一个内容区实测，本行其他场景未执行",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0220",
+      "page": "学者详情页",
+      "name": "中文姓名",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0221",
+      "page": "学者详情页",
+      "name": "英文姓名",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0222",
+      "page": "学者详情页",
+      "name": "职称",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0223",
+      "page": "学者详情页",
+      "name": "组织",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0224",
+      "page": "学者详情页",
+      "name": "个人介绍",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0225",
+      "page": "学者详情页",
+      "name": "性别",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0226",
+      "page": "学者详情页",
+      "name": "引用量",
+      "status": "部分符合",
+      "reason": "对应文字在现场页面可见；尚未完成本行预期行为验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0227",
+      "page": "学者详情页",
+      "name": "论文数量",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0228",
+      "page": "学者详情页",
+      "name": "H指数",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0229",
+      "page": "学者详情页",
+      "name": "G指数",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0230",
+      "page": "学者详情页",
+      "name": "活跃度",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0231",
+      "page": "学者详情页",
+      "name": "多样性",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0232",
+      "page": "学者详情页",
+      "name": "社交性",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0233",
+      "page": "学者详情页",
+      "name": "教育背景",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0234",
+      "page": "学者详情页",
+      "name": "工作经历",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0235",
+      "page": "学者详情页",
+      "name": "研究兴趣",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0236",
+      "page": "学者详情页",
+      "name": "个人介绍展开收起",
+      "status": "部分符合",
+      "reason": "页面存在展开收起能力；仅对指定第一个内容区实测，本行其他场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0237",
+      "page": "学者详情页",
+      "name": "研究兴趣展开收起",
+      "status": "部分符合",
+      "reason": "页面存在展开收起能力；仅对指定第一个内容区实测，本行其他场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0238",
+      "page": "学者详情页",
+      "name": "论文标题",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0239",
+      "page": "学者详情页",
+      "name": "论文期刊",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0240",
+      "page": "学者详情页",
+      "name": "专利标题",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0241",
+      "page": "学者详情页",
+      "name": "专利申请号",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0242",
+      "page": "学者详情页",
+      "name": "专利公开号",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0243",
+      "page": "学者详情页",
+      "name": "专利法律状态",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0244",
+      "page": "学者详情页",
+      "name": "论文引用量",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0245",
+      "page": "学者详情页",
+      "name": "论文浏览量",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0246",
+      "page": "学者详情页",
+      "name": "论文年份",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0247",
+      "page": "学者详情页",
+      "name": "论文作者",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0248",
+      "page": "学者详情页",
+      "name": "专利发明人",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0249",
+      "page": "学者详情页",
+      "name": "论文",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0250",
+      "page": "学者详情页",
+      "name": "专利",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0251",
+      "page": "学者详情页",
+      "name": "成果分页",
+      "status": "部分符合",
+      "reason": "已定位分页组件；只验证了部分页码和内容变化，其他边界场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0252",
+      "page": "学者详情页",
+      "name": "论文排序",
+      "status": "部分符合",
+      "reason": "页面存在对应排序区；本轮未逐项核验排序结果",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0253",
+      "page": "学者详情页",
+      "name": "年度发文趋势",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0254",
+      "page": "学者详情页",
+      "name": "年度引用趋势",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0255",
+      "page": "学者详情页",
+      "name": "H指数统计",
+      "status": "待核验",
+      "reason": "代码有统计线索，本轮未定位该具体图表或完整数据",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0256",
+      "page": "学者详情页",
+      "name": "G指数统计",
+      "status": "待核验",
+      "reason": "代码有统计线索，本轮未定位该具体图表或完整数据",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0257",
+      "page": "学者详情页",
+      "name": "作者统计",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0258",
+      "page": "学者详情页",
+      "name": "研究兴趣趋势",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0259",
+      "page": "学者详情页",
+      "name": "合作学者名称",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0260",
+      "page": "学者详情页",
+      "name": "合作学者机构信息",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0261",
+      "page": "学者详情页",
+      "name": "合作学者合作次数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0262",
+      "page": "学者详情页",
+      "name": "合作学者列表",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0263",
+      "page": "学者详情页",
+      "name": "合作学者关系图",
+      "status": "待核验",
+      "reason": "合作关系代码存在，但本轮未进入并验证指定关系图视图",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0264",
+      "page": "学者详情页",
+      "name": "合作学者列表视图",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0265",
+      "page": "学者详情页",
+      "name": "合作学者图表视图",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0266",
+      "page": "学者详情页",
+      "name": "合作机构名称",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0267",
+      "page": "学者详情页",
+      "name": "合作机构机构信息",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0268",
+      "page": "学者详情页",
+      "name": "合作机构合作次数",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0269",
+      "page": "学者详情页",
+      "name": "合作机构列表",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0270",
+      "page": "学者详情页",
+      "name": "合作机构关系图",
+      "status": "待核验",
+      "reason": "合作关系代码存在，但本轮未进入并验证指定关系图视图",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0271",
+      "page": "学者详情页",
+      "name": "合作机构列表视图",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0272",
+      "page": "学者详情页",
+      "name": "合作机构图表视图",
+      "status": "部分符合",
+      "reason": "对应页签或入口文字可见；切换、数据归属及异常状态未完整核验",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "component": "FE-0273",
+      "page": "职业迁徙弹窗",
+      "name": "职业迁徙地图",
+      "status": "无法核验",
+      "reason": "未登录，职业迁徙入口跳转统一认证；弹窗与迁徙数据未核验",
+      "evidence": "follow-migration.txt"
+    },
+    {
+      "component": "FE-0274",
+      "page": "职业迁徙弹窗",
+      "name": "地点名称",
+      "status": "无法核验",
+      "reason": "未登录，职业迁徙入口跳转统一认证；弹窗与迁徙数据未核验",
+      "evidence": "follow-migration.txt"
+    },
+    {
+      "component": "FE-0275",
+      "page": "职业迁徙弹窗",
+      "name": "机构名称",
+      "status": "无法核验",
+      "reason": "未登录，职业迁徙入口跳转统一认证；弹窗与迁徙数据未核验",
+      "evidence": "follow-migration.txt"
+    },
+    {
+      "component": "FE-0276",
+      "page": "职业迁徙弹窗",
+      "name": "迁徙地点数量",
+      "status": "无法核验",
+      "reason": "未登录，职业迁徙入口跳转统一认证；弹窗与迁徙数据未核验",
+      "evidence": "follow-migration.txt"
+    },
+    {
+      "component": "FE-0277",
+      "page": "职业迁徙弹窗",
+      "name": "迁徙路径数量",
+      "status": "无法核验",
+      "reason": "未登录，职业迁徙入口跳转统一认证；弹窗与迁徙数据未核验",
+      "evidence": "follow-migration.txt"
+    },
+    {
+      "component": "FE-0278",
+      "page": "职业迁徙弹窗",
+      "name": "停留时长",
+      "status": "无法核验",
+      "reason": "未登录，职业迁徙入口跳转统一认证；弹窗与迁徙数据未核验",
+      "evidence": "follow-migration.txt"
+    },
+    {
+      "component": "FE-0279",
+      "page": "职业迁徙弹窗",
+      "name": "迁入时间",
+      "status": "无法核验",
+      "reason": "未登录，职业迁徙入口跳转统一认证；弹窗与迁徙数据未核验",
+      "evidence": "follow-migration.txt"
+    },
+    {
+      "component": "FE-0280",
+      "page": "职业迁徙弹窗",
+      "name": "迁出时间",
+      "status": "无法核验",
+      "reason": "未登录，职业迁徙入口跳转统一认证；弹窗与迁徙数据未核验",
+      "evidence": "follow-migration.txt"
+    },
+    {
+      "component": "FE-0281",
+      "page": "职业迁徙弹窗",
+      "name": "打开迁徙",
+      "status": "无法核验",
+      "reason": "未登录，职业迁徙入口跳转统一认证；弹窗与迁徙数据未核验",
+      "evidence": "follow-migration.txt"
+    },
+    {
+      "component": "FE-0282",
+      "page": "职业迁徙弹窗",
+      "name": "关闭弹窗",
+      "status": "无法核验",
+      "reason": "未登录，职业迁徙入口跳转统一认证；弹窗与迁徙数据未核验",
+      "evidence": "follow-migration.txt"
+    },
+    {
+      "component": "FE-0283",
+      "page": "期刊详情页",
+      "name": "期刊名称",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0284",
+      "page": "期刊详情页",
+      "name": "期刊别名",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0285",
+      "page": "期刊详情页",
+      "name": "期刊类型",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0286",
+      "page": "期刊详情页",
+      "name": "ISSN",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0287",
+      "page": "期刊详情页",
+      "name": "EISSN",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0288",
+      "page": "期刊详情页",
+      "name": "官方网站",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0289",
+      "page": "期刊详情页",
+      "name": "历年发表论文数量",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0290",
+      "page": "期刊详情页",
+      "name": "标题",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0291",
+      "page": "期刊详情页",
+      "name": "摘要",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0292",
+      "page": "期刊详情页",
+      "name": "DOI",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0293",
+      "page": "期刊详情页",
+      "name": "引用量",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0294",
+      "page": "期刊详情页",
+      "name": "发表年份",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0295",
+      "page": "期刊详情页",
+      "name": "作者",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0296",
+      "page": "期刊详情页",
+      "name": "关键词",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0297",
+      "page": "期刊详情页",
+      "name": "期刊论文分页",
+      "status": "部分符合",
+      "reason": "已定位分页组件；只验证了部分页码和内容变化，其他边界场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0298",
+      "page": "期刊详情页",
+      "name": "期刊论文排序",
+      "status": "部分符合",
+      "reason": "页面存在对应排序区；本轮未逐项核验排序结果",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0299",
+      "page": "期刊详情页",
+      "name": "国家地区分布排行榜",
+      "status": "部分符合",
+      "reason": "已观察对应排行榜；本行的特殊数据与排名规则尚未验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0300",
+      "page": "期刊详情页",
+      "name": "排行实体名称",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0301",
+      "page": "期刊详情页",
+      "name": "排名序号",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0302",
+      "page": "期刊详情页",
+      "name": "论文数量",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0303",
+      "page": "期刊详情页",
+      "name": "机构分布排行榜",
+      "status": "部分符合",
+      "reason": "已观察对应排行榜；本行的特殊数据与排名规则尚未验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0304",
+      "page": "期刊详情页",
+      "name": "排行实体名称",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0305",
+      "page": "期刊详情页",
+      "name": "排名序号",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0306",
+      "page": "期刊详情页",
+      "name": "论文数量",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0307",
+      "page": "期刊详情页",
+      "name": "研究主题分类排行榜",
+      "status": "部分符合",
+      "reason": "已观察对应排行榜；本行的特殊数据与排名规则尚未验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0308",
+      "page": "期刊详情页",
+      "name": "排行实体名称",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0309",
+      "page": "期刊详情页",
+      "name": "排名序号",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0310",
+      "page": "期刊详情页",
+      "name": "论文数量",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0311",
+      "page": "期刊详情页",
+      "name": "高产作者排行榜",
+      "status": "部分符合",
+      "reason": "已观察对应排行榜；本行的特殊数据与排名规则尚未验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0312",
+      "page": "期刊详情页",
+      "name": "排行实体名称",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0313",
+      "page": "期刊详情页",
+      "name": "排名序号",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0314",
+      "page": "期刊详情页",
+      "name": "论文数量",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0315",
+      "page": "期刊详情页",
+      "name": "高引作者排行榜",
+      "status": "部分符合",
+      "reason": "已观察对应排行榜；本行的特殊数据与排名规则尚未验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0316",
+      "page": "期刊详情页",
+      "name": "排行实体名称",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0317",
+      "page": "期刊详情页",
+      "name": "排名序号",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0318",
+      "page": "期刊详情页",
+      "name": "引用量",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "component": "FE-0319",
+      "page": "机构详情页",
+      "name": "中文名称",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0320",
+      "page": "机构详情页",
+      "name": "英文名称",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0321",
+      "page": "机构详情页",
+      "name": "机构类型",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0322",
+      "page": "机构详情页",
+      "name": "地址",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0323",
+      "page": "机构详情页",
+      "name": "机构简介",
+      "status": "待核验",
+      "reason": "没有明确定位本行对应组件；代码或需规推导不能替代现场验证",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0324",
+      "page": "机构详情页",
+      "name": "论文总数",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0325",
+      "page": "机构详情页",
+      "name": "学者数量",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0326",
+      "page": "机构详情页",
+      "name": "创立年份",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0327",
+      "page": "机构详情页",
+      "name": "发文趋势",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0328",
+      "page": "机构详情页",
+      "name": "引用趋势",
+      "status": "部分符合",
+      "reason": "相关统计或维度已见，但图中数值、坐标、更新及本行数据边界未完整验证",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0329",
+      "page": "机构详情页",
+      "name": "标题",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0330",
+      "page": "机构详情页",
+      "name": "摘要",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0331",
+      "page": "机构详情页",
+      "name": "DOI",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0332",
+      "page": "机构详情页",
+      "name": "引用量",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0333",
+      "page": "机构详情页",
+      "name": "发表年份",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0334",
+      "page": "机构详情页",
+      "name": "作者",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0335",
+      "page": "机构详情页",
+      "name": "关键词",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0336",
+      "page": "机构详情页",
+      "name": "机构论文分页",
+      "status": "部分符合",
+      "reason": "已定位分页组件；只验证了部分页码和内容变化，其他边界场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0337",
+      "page": "机构详情页",
+      "name": "机构论文排序",
+      "status": "部分符合",
+      "reason": "页面存在对应排序区；本轮未逐项核验排序结果",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0338",
+      "page": "机构详情页",
+      "name": "高产作者排行榜",
+      "status": "部分符合",
+      "reason": "已观察对应排行榜；本行的特殊数据与排名规则尚未验证",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0339",
+      "page": "机构详情页",
+      "name": "学者名称",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0340",
+      "page": "机构详情页",
+      "name": "排名序号",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0341",
+      "page": "机构详情页",
+      "name": "论文数量",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0342",
+      "page": "机构详情页",
+      "name": "高引作者排行榜",
+      "status": "部分符合",
+      "reason": "已观察对应排行榜；本行的特殊数据与排名规则尚未验证",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0343",
+      "page": "机构详情页",
+      "name": "学者名称",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0344",
+      "page": "机构详情页",
+      "name": "排名序号",
+      "status": "部分符合",
+      "reason": "对应排行标题和行样本可见；本行字段边界及排序准确性未完整验证",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0345",
+      "page": "机构详情页",
+      "name": "引用量",
+      "status": "部分符合",
+      "reason": "现场样本可定位对应展示字段或内容区；本行特定数据及异常场景未执行",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "component": "FE-0346",
+      "page": "资讯列表页",
+      "name": "产业类别",
+      "status": "部分符合",
+      "reason": "实际产业按钮已定位，两个类别切换请求成功；结果归属未逐条验证",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0347",
+      "page": "资讯列表页",
+      "name": "发布时间排序",
+      "status": "部分符合",
+      "reason": "已打开实际排序下拉并检查两个方向；本行其他输入和状态未完整验证",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0348",
+      "page": "资讯合并来源展开区",
+      "name": "来源标题",
+      "status": "待核验",
+      "reason": "多源入口有代码线索，未定位并逐项核验本行合并来源内容",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0349",
+      "page": "资讯合并来源展开区",
+      "name": "来源名称",
+      "status": "待核验",
+      "reason": "多源入口有代码线索，未定位并逐项核验本行合并来源内容",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0350",
+      "page": "资讯合并来源展开区",
+      "name": "来源摘要",
+      "status": "待核验",
+      "reason": "多源入口有代码线索，未定位并逐项核验本行合并来源内容",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0351",
+      "page": "资讯合并来源展开区",
+      "name": "分类信息",
+      "status": "待核验",
+      "reason": "多源入口有代码线索，未定位并逐项核验本行合并来源内容",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0352",
+      "page": "资讯合并来源展开区",
+      "name": "正文",
+      "status": "待核验",
+      "reason": "多源入口有代码线索，未定位并逐项核验本行合并来源内容",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0353",
+      "page": "资讯合并来源展开区",
+      "name": "发布时间",
+      "status": "待核验",
+      "reason": "多源入口有代码线索，未定位并逐项核验本行合并来源内容",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0354",
+      "page": "资讯合并来源展开区",
+      "name": "来源原文链接",
+      "status": "待核验",
+      "reason": "多源入口有代码线索，未定位并逐项核验本行合并来源内容",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0355",
+      "page": "资讯合并来源展开区",
+      "name": "合并来源列表",
+      "status": "待核验",
+      "reason": "多源入口有代码线索，未定位并逐项核验本行合并来源内容",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0356",
+      "page": "资讯合并来源展开区",
+      "name": "展开多源报道",
+      "status": "待核验",
+      "reason": "多源入口有代码线索，未定位并逐项核验本行合并来源内容",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0357",
+      "page": "资讯合并来源展开区",
+      "name": "收起多源报道",
+      "status": "待核验",
+      "reason": "多源入口有代码线索，未定位并逐项核验本行合并来源内容",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0358",
+      "page": "论文翻译结果区",
+      "name": "标题原文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0359",
+      "page": "论文翻译结果区",
+      "name": "标题译文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0360",
+      "page": "论文翻译结果区",
+      "name": "摘要原文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0361",
+      "page": "论文翻译结果区",
+      "name": "摘要译文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0362",
+      "page": "论文翻译结果区",
+      "name": "关键词原文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0363",
+      "page": "论文翻译结果区",
+      "name": "关键词译文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0364",
+      "page": "论文翻译结果区",
+      "name": "原文译文切换",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0365",
+      "page": "论文翻译结果区",
+      "name": "翻译入口",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0366",
+      "page": "专利翻译结果区",
+      "name": "标题原文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0367",
+      "page": "专利翻译结果区",
+      "name": "标题译文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0368",
+      "page": "专利翻译结果区",
+      "name": "摘要原文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0369",
+      "page": "专利翻译结果区",
+      "name": "摘要译文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0370",
+      "page": "专利翻译结果区",
+      "name": "权利要求书原文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0371",
+      "page": "专利翻译结果区",
+      "name": "权利要求书译文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0372",
+      "page": "专利翻译结果区",
+      "name": "原文译文切换",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0373",
+      "page": "专利翻译结果区",
+      "name": "翻译入口",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "patent-detail.txt"
+    },
+    {
+      "component": "FE-0374",
+      "page": "科技资讯翻译结果区",
+      "name": "标题原文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0375",
+      "page": "科技资讯翻译结果区",
+      "name": "标题译文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0376",
+      "page": "科技资讯翻译结果区",
+      "name": "摘要原文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0377",
+      "page": "科技资讯翻译结果区",
+      "name": "摘要译文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0378",
+      "page": "科技资讯翻译结果区",
+      "name": "正文原文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0379",
+      "page": "科技资讯翻译结果区",
+      "name": "正文译文",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0380",
+      "page": "科技资讯翻译结果区",
+      "name": "原文译文切换",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0381",
+      "page": "科技资讯翻译结果区",
+      "name": "翻译入口",
+      "status": "无法核验",
+      "reason": "本轮未触发翻译或取得原文译文结果，不把代码线索标为通过",
+      "evidence": "information.txt"
+    },
+    {
+      "component": "FE-0382",
+      "page": "论文订阅管理窗口",
+      "name": "订阅入口",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-paper-subscription.txt"
+    },
+    {
+      "component": "FE-0383",
+      "page": "论文订阅管理窗口",
+      "name": "订阅标签",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-paper-subscription.txt"
+    },
+    {
+      "component": "FE-0384",
+      "page": "论文订阅管理窗口",
+      "name": "标签搜索输入框",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-paper-subscription.txt"
+    },
+    {
+      "component": "FE-0385",
+      "page": "论文订阅管理窗口",
+      "name": "标签添加",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-paper-subscription.txt"
+    },
+    {
+      "component": "FE-0386",
+      "page": "论文订阅管理窗口",
+      "name": "标签移除",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-paper-subscription.txt"
+    },
+    {
+      "component": "FE-0387",
+      "page": "论文订阅管理窗口",
+      "name": "保存订阅",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-paper-subscription.txt"
+    },
+    {
+      "component": "FE-0388",
+      "page": "论文订阅管理窗口",
+      "name": "取消编辑",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-paper-subscription.txt"
+    },
+    {
+      "component": "FE-0389",
+      "page": "论文订阅管理窗口",
+      "name": "保存成功提示",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-paper-subscription.txt"
+    },
+    {
+      "component": "FE-0390",
+      "page": "论文订阅管理窗口",
+      "name": "保存失败提示",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-paper-subscription.txt"
+    },
+    {
+      "component": "FE-0391",
+      "page": "资讯订阅管理窗口",
+      "name": "订阅入口",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-information-subscription.txt"
+    },
+    {
+      "component": "FE-0392",
+      "page": "资讯订阅管理窗口",
+      "name": "订阅标签",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-information-subscription.txt"
+    },
+    {
+      "component": "FE-0393",
+      "page": "资讯订阅管理窗口",
+      "name": "标签搜索输入框",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-information-subscription.txt"
+    },
+    {
+      "component": "FE-0394",
+      "page": "资讯订阅管理窗口",
+      "name": "标签添加",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-information-subscription.txt"
+    },
+    {
+      "component": "FE-0395",
+      "page": "资讯订阅管理窗口",
+      "name": "标签移除",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-information-subscription.txt"
+    },
+    {
+      "component": "FE-0396",
+      "page": "资讯订阅管理窗口",
+      "name": "保存订阅",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-information-subscription.txt"
+    },
+    {
+      "component": "FE-0397",
+      "page": "资讯订阅管理窗口",
+      "name": "取消编辑",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-information-subscription.txt"
+    },
+    {
+      "component": "FE-0398",
+      "page": "资讯订阅管理窗口",
+      "name": "保存成功提示",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-information-subscription.txt"
+    },
+    {
+      "component": "FE-0399",
+      "page": "资讯订阅管理窗口",
+      "name": "保存失败提示",
+      "status": "无法核验",
+      "reason": "未登录订阅入口触发统一认证，未保存订阅",
+      "evidence": "follow-information-subscription.txt"
+    },
+    {
+      "component": "FE-0400",
+      "page": "论文AI智能解析区",
+      "name": "解析登录入口",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0401",
+      "page": "论文AI智能解析区",
+      "name": "PDF上传",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0402",
+      "page": "论文AI智能解析区",
+      "name": "立即解析",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0403",
+      "page": "论文AI智能解析区",
+      "name": "重新上传",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0404",
+      "page": "论文AI智能解析区",
+      "name": "重新解析",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0405",
+      "page": "论文AI智能解析区",
+      "name": "正在导入提示",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0406",
+      "page": "论文AI智能解析区",
+      "name": "文件上传成功提示",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0407",
+      "page": "论文AI智能解析区",
+      "name": "文件上传失败提示",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0408",
+      "page": "论文AI智能解析区",
+      "name": "AI解析中提示",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0409",
+      "page": "论文AI智能解析区",
+      "name": "AI解析失败提示",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0410",
+      "page": "论文AI智能解析区",
+      "name": "解析完成提示",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0411",
+      "page": "论文AI智能解析区",
+      "name": "PDF文件名称",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0412",
+      "page": "论文AI智能解析区",
+      "name": "文献大纲",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0413",
+      "page": "论文AI智能解析区",
+      "name": "作者介绍",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0414",
+      "page": "论文AI智能解析区",
+      "name": "图片内容",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0415",
+      "page": "论文AI智能解析区",
+      "name": "表格内容",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0416",
+      "page": "论文AI智能解析区",
+      "name": "关键问题",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0417",
+      "page": "论文AI智能解析区",
+      "name": "摘要文本",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0418",
+      "page": "论文AI智能解析区",
+      "name": "作者姓名",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0419",
+      "page": "论文AI智能解析区",
+      "name": "作者机构",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0420",
+      "page": "论文AI智能解析区",
+      "name": "研究方向",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0421",
+      "page": "论文AI智能解析区",
+      "name": "图片说明",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0422",
+      "page": "论文AI智能解析区",
+      "name": "表格文字",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0423",
+      "page": "论文AI智能解析区",
+      "name": "关键问题标题",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0424",
+      "page": "论文AI智能解析区",
+      "name": "关键问题解答",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0425",
+      "page": "论文溯源树区",
+      "name": "溯源树登录入口",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0426",
+      "page": "论文溯源树区",
+      "name": "生成脉络",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0427",
+      "page": "论文溯源树区",
+      "name": "查看脉络",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0428",
+      "page": "论文溯源树区",
+      "name": "重新生成",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0429",
+      "page": "论文溯源树区",
+      "name": "开始计算",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0430",
+      "page": "论文溯源树区",
+      "name": "状态加载中",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0431",
+      "page": "论文溯源树区",
+      "name": "参考文献不足提示",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0432",
+      "page": "论文溯源树区",
+      "name": "生成中提示",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0433",
+      "page": "论文溯源树区",
+      "name": "生成成功提示",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0434",
+      "page": "论文溯源树区",
+      "name": "生成失败提示",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0435",
+      "page": "论文溯源树区",
+      "name": "请求失败提示",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0436",
+      "page": "论文溯源树区",
+      "name": "树加载失败提示",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0437",
+      "page": "论文溯源树区",
+      "name": "参考文献数量",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0438",
+      "page": "论文溯源树区",
+      "name": "引用关系图谱",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0439",
+      "page": "论文溯源树区",
+      "name": "节点论文标题",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0440",
+      "page": "论文溯源树区",
+      "name": "节点作者",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0441",
+      "page": "论文溯源树区",
+      "name": "节点摘要",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0442",
+      "page": "论文溯源树区",
+      "name": "节点重要程度",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0443",
+      "page": "论文溯源树区",
+      "name": "节点发表年份",
+      "status": "无法核验",
+      "reason": "论文详情明确显示登录后使用；解析、上传和计算未执行",
+      "evidence": "paper-detail.txt"
+    },
+    {
+      "component": "FE-0444",
+      "page": "综合检索-国家代码显示",
+      "name": "AP → 非洲工业产权组织",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0445",
+      "page": "综合检索-国家代码显示",
+      "name": "EM → 欧盟知识产权局",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0446",
+      "page": "综合检索-国家代码显示",
+      "name": "EP → 欧洲专利局",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0447",
+      "page": "综合检索-国家代码显示",
+      "name": "EU → 欧盟",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0448",
+      "page": "综合检索-国家代码显示",
+      "name": "GC → 海湾合作委员会",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0449",
+      "page": "综合检索-国家代码显示",
+      "name": "IB → 世界知识产权组织国际局",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0450",
+      "page": "综合检索-国家代码显示",
+      "name": "OA → 非洲知识产权组织",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0451",
+      "page": "综合检索-国家代码显示",
+      "name": "QZ → 欧盟植物品种局",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0452",
+      "page": "综合检索-国家代码显示",
+      "name": "WO → 世界知识产权组织",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0453",
+      "page": "综合检索-国家代码显示",
+      "name": "CS → 捷克斯洛伐克",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0454",
+      "page": "综合检索-国家代码显示",
+      "name": "DD → 东德",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0455",
+      "page": "综合检索-国家代码显示",
+      "name": "SU → 苏联",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0456",
+      "page": "综合检索-国家代码显示",
+      "name": "YU → 南斯拉夫",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0457",
+      "page": "综合检索-国家代码显示",
+      "name": "AD → 安道尔",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0458",
+      "page": "综合检索-国家代码显示",
+      "name": "AE → 阿联酋",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0459",
+      "page": "综合检索-国家代码显示",
+      "name": "AF → 阿富汗",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0460",
+      "page": "综合检索-国家代码显示",
+      "name": "AG → 安提瓜和巴布达",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0461",
+      "page": "综合检索-国家代码显示",
+      "name": "AI → 安圭拉",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0462",
+      "page": "综合检索-国家代码显示",
+      "name": "AL → 阿尔巴尼亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0463",
+      "page": "综合检索-国家代码显示",
+      "name": "AM → 亚美尼亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0464",
+      "page": "综合检索-国家代码显示",
+      "name": "AO → 安哥拉",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0465",
+      "page": "综合检索-国家代码显示",
+      "name": "AQ → 南极洲",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0466",
+      "page": "综合检索-国家代码显示",
+      "name": "AR → 阿根廷",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0467",
+      "page": "综合检索-国家代码显示",
+      "name": "AS → 美属萨摩亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0468",
+      "page": "综合检索-国家代码显示",
+      "name": "AT → 奥地利",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0469",
+      "page": "综合检索-国家代码显示",
+      "name": "AU → 澳大利亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0470",
+      "page": "综合检索-国家代码显示",
+      "name": "AW → 阿鲁巴",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0471",
+      "page": "综合检索-国家代码显示",
+      "name": "AX → 奥兰群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0472",
+      "page": "综合检索-国家代码显示",
+      "name": "AZ → 阿塞拜疆",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0473",
+      "page": "综合检索-国家代码显示",
+      "name": "BA → 波黑",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0474",
+      "page": "综合检索-国家代码显示",
+      "name": "BB → 巴巴多斯",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0475",
+      "page": "综合检索-国家代码显示",
+      "name": "BD → 孟加拉国",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0476",
+      "page": "综合检索-国家代码显示",
+      "name": "BE → 比利时",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0477",
+      "page": "综合检索-国家代码显示",
+      "name": "BF → 布基纳法索",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0478",
+      "page": "综合检索-国家代码显示",
+      "name": "BG → 保加利亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0479",
+      "page": "综合检索-国家代码显示",
+      "name": "BH → 巴林",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0480",
+      "page": "综合检索-国家代码显示",
+      "name": "BI → 布隆迪",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0481",
+      "page": "综合检索-国家代码显示",
+      "name": "BJ → 贝宁",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0482",
+      "page": "综合检索-国家代码显示",
+      "name": "BL → 圣巴泰勒米",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0483",
+      "page": "综合检索-国家代码显示",
+      "name": "BM → 百慕大",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0484",
+      "page": "综合检索-国家代码显示",
+      "name": "BN → 文莱",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0485",
+      "page": "综合检索-国家代码显示",
+      "name": "BO → 玻利维亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0486",
+      "page": "综合检索-国家代码显示",
+      "name": "BQ → 荷属加勒比",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0487",
+      "page": "综合检索-国家代码显示",
+      "name": "BR → 巴西",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0488",
+      "page": "综合检索-国家代码显示",
+      "name": "BS → 巴哈马",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0489",
+      "page": "综合检索-国家代码显示",
+      "name": "BT → 不丹",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0490",
+      "page": "综合检索-国家代码显示",
+      "name": "BV → 布韦岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0491",
+      "page": "综合检索-国家代码显示",
+      "name": "BW → 博茨瓦纳",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0492",
+      "page": "综合检索-国家代码显示",
+      "name": "BY → 白俄罗斯",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0493",
+      "page": "综合检索-国家代码显示",
+      "name": "BZ → 伯利兹",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0494",
+      "page": "综合检索-国家代码显示",
+      "name": "CA → 加拿大",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0495",
+      "page": "综合检索-国家代码显示",
+      "name": "CC → 科科斯群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0496",
+      "page": "综合检索-国家代码显示",
+      "name": "CD → 刚果（金）",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0497",
+      "page": "综合检索-国家代码显示",
+      "name": "CF → 中非",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0498",
+      "page": "综合检索-国家代码显示",
+      "name": "CG → 刚果（布）",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0499",
+      "page": "综合检索-国家代码显示",
+      "name": "CH → 瑞士",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0500",
+      "page": "综合检索-国家代码显示",
+      "name": "CI → 科特迪瓦",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0501",
+      "page": "综合检索-国家代码显示",
+      "name": "CK → 库克群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0502",
+      "page": "综合检索-国家代码显示",
+      "name": "CL → 智利",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0503",
+      "page": "综合检索-国家代码显示",
+      "name": "CM → 喀麦隆",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0504",
+      "page": "综合检索-国家代码显示",
+      "name": "CN → 中国",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0505",
+      "page": "综合检索-国家代码显示",
+      "name": "CO → 哥伦比亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0506",
+      "page": "综合检索-国家代码显示",
+      "name": "CR → 哥斯达黎加",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0507",
+      "page": "综合检索-国家代码显示",
+      "name": "CU → 古巴",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0508",
+      "page": "综合检索-国家代码显示",
+      "name": "CV → 佛得角",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0509",
+      "page": "综合检索-国家代码显示",
+      "name": "CW → 库拉索",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0510",
+      "page": "综合检索-国家代码显示",
+      "name": "CX → 圣诞岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0511",
+      "page": "综合检索-国家代码显示",
+      "name": "CY → 塞浦路斯",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0512",
+      "page": "综合检索-国家代码显示",
+      "name": "CZ → 捷克",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0513",
+      "page": "综合检索-国家代码显示",
+      "name": "DE → 德国",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0514",
+      "page": "综合检索-国家代码显示",
+      "name": "DJ → 吉布提",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0515",
+      "page": "综合检索-国家代码显示",
+      "name": "DK → 丹麦",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0516",
+      "page": "综合检索-国家代码显示",
+      "name": "DM → 多米尼克",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0517",
+      "page": "综合检索-国家代码显示",
+      "name": "DO → 多米尼加",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0518",
+      "page": "综合检索-国家代码显示",
+      "name": "DZ → 阿尔及利亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0519",
+      "page": "综合检索-国家代码显示",
+      "name": "EC → 厄瓜多尔",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0520",
+      "page": "综合检索-国家代码显示",
+      "name": "EE → 爱沙尼亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0521",
+      "page": "综合检索-国家代码显示",
+      "name": "EG → 埃及",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0522",
+      "page": "综合检索-国家代码显示",
+      "name": "EH → 西撒哈拉",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0523",
+      "page": "综合检索-国家代码显示",
+      "name": "ER → 厄立特里亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0524",
+      "page": "综合检索-国家代码显示",
+      "name": "ES → 西班牙",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0525",
+      "page": "综合检索-国家代码显示",
+      "name": "ET → 埃塞俄比亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0526",
+      "page": "综合检索-国家代码显示",
+      "name": "FI → 芬兰",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0527",
+      "page": "综合检索-国家代码显示",
+      "name": "FJ → 斐济",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0528",
+      "page": "综合检索-国家代码显示",
+      "name": "FK → 福克兰群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0529",
+      "page": "综合检索-国家代码显示",
+      "name": "FM → 密克罗尼西亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0530",
+      "page": "综合检索-国家代码显示",
+      "name": "FO → 法罗群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0531",
+      "page": "综合检索-国家代码显示",
+      "name": "FR → 法国",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0532",
+      "page": "综合检索-国家代码显示",
+      "name": "GA → 加蓬",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0533",
+      "page": "综合检索-国家代码显示",
+      "name": "GB → 英国",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0534",
+      "page": "综合检索-国家代码显示",
+      "name": "GD → 格林纳达",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0535",
+      "page": "综合检索-国家代码显示",
+      "name": "GE → 格鲁吉亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0536",
+      "page": "综合检索-国家代码显示",
+      "name": "GF → 法属圭亚那",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0537",
+      "page": "综合检索-国家代码显示",
+      "name": "GG → 根西岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0538",
+      "page": "综合检索-国家代码显示",
+      "name": "GH → 加纳",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0539",
+      "page": "综合检索-国家代码显示",
+      "name": "GI → 直布罗陀",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0540",
+      "page": "综合检索-国家代码显示",
+      "name": "GL → 格陵兰",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0541",
+      "page": "综合检索-国家代码显示",
+      "name": "GM → 冈比亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0542",
+      "page": "综合检索-国家代码显示",
+      "name": "GN → 几内亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0543",
+      "page": "综合检索-国家代码显示",
+      "name": "GP → 瓜德罗普",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0544",
+      "page": "综合检索-国家代码显示",
+      "name": "GQ → 赤道几内亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0545",
+      "page": "综合检索-国家代码显示",
+      "name": "GR → 希腊",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0546",
+      "page": "综合检索-国家代码显示",
+      "name": "GS → 南乔治亚和南桑威奇群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0547",
+      "page": "综合检索-国家代码显示",
+      "name": "GT → 危地马拉",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0548",
+      "page": "综合检索-国家代码显示",
+      "name": "GU → 关岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0549",
+      "page": "综合检索-国家代码显示",
+      "name": "GW → 几内亚比绍",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0550",
+      "page": "综合检索-国家代码显示",
+      "name": "GY → 圭亚那",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0551",
+      "page": "综合检索-国家代码显示",
+      "name": "HK → 香港",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0552",
+      "page": "综合检索-国家代码显示",
+      "name": "HM → 赫德岛和麦克唐纳群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0553",
+      "page": "综合检索-国家代码显示",
+      "name": "HN → 洪都拉斯",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0554",
+      "page": "综合检索-国家代码显示",
+      "name": "HR → 克罗地亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0555",
+      "page": "综合检索-国家代码显示",
+      "name": "HT → 海地",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0556",
+      "page": "综合检索-国家代码显示",
+      "name": "HU → 匈牙利",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0557",
+      "page": "综合检索-国家代码显示",
+      "name": "ID → 印度尼西亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0558",
+      "page": "综合检索-国家代码显示",
+      "name": "IE → 爱尔兰",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0559",
+      "page": "综合检索-国家代码显示",
+      "name": "IL → 以色列",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0560",
+      "page": "综合检索-国家代码显示",
+      "name": "IM → 马恩岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0561",
+      "page": "综合检索-国家代码显示",
+      "name": "IN → 印度",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0562",
+      "page": "综合检索-国家代码显示",
+      "name": "IO → 英属印度洋领地",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0563",
+      "page": "综合检索-国家代码显示",
+      "name": "IQ → 伊拉克",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0564",
+      "page": "综合检索-国家代码显示",
+      "name": "IR → 伊朗",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0565",
+      "page": "综合检索-国家代码显示",
+      "name": "IS → 冰岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0566",
+      "page": "综合检索-国家代码显示",
+      "name": "IT → 意大利",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0567",
+      "page": "综合检索-国家代码显示",
+      "name": "JE → 泽西岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0568",
+      "page": "综合检索-国家代码显示",
+      "name": "JM → 牙买加",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0569",
+      "page": "综合检索-国家代码显示",
+      "name": "JO → 约旦",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0570",
+      "page": "综合检索-国家代码显示",
+      "name": "JP → 日本",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0571",
+      "page": "综合检索-国家代码显示",
+      "name": "KE → 肯尼亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0572",
+      "page": "综合检索-国家代码显示",
+      "name": "KG → 吉尔吉斯斯坦",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0573",
+      "page": "综合检索-国家代码显示",
+      "name": "KH → 柬埔寨",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0574",
+      "page": "综合检索-国家代码显示",
+      "name": "KI → 基里巴斯",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0575",
+      "page": "综合检索-国家代码显示",
+      "name": "KM → 科摩罗",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0576",
+      "page": "综合检索-国家代码显示",
+      "name": "KN → 圣基茨和尼维斯",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0577",
+      "page": "综合检索-国家代码显示",
+      "name": "KP → 朝鲜",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0578",
+      "page": "综合检索-国家代码显示",
+      "name": "KR → 韩国",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0579",
+      "page": "综合检索-国家代码显示",
+      "name": "KW → 科威特",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0580",
+      "page": "综合检索-国家代码显示",
+      "name": "KY → 开曼群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0581",
+      "page": "综合检索-国家代码显示",
+      "name": "KZ → 哈萨克斯坦",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0582",
+      "page": "综合检索-国家代码显示",
+      "name": "LA → 老挝",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0583",
+      "page": "综合检索-国家代码显示",
+      "name": "LB → 黎巴嫩",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0584",
+      "page": "综合检索-国家代码显示",
+      "name": "LC → 圣卢西亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0585",
+      "page": "综合检索-国家代码显示",
+      "name": "LI → 列支敦士登",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0586",
+      "page": "综合检索-国家代码显示",
+      "name": "LK → 斯里兰卡",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0587",
+      "page": "综合检索-国家代码显示",
+      "name": "LR → 利比里亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0588",
+      "page": "综合检索-国家代码显示",
+      "name": "LS → 莱索托",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0589",
+      "page": "综合检索-国家代码显示",
+      "name": "LT → 立陶宛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0590",
+      "page": "综合检索-国家代码显示",
+      "name": "LU → 卢森堡",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0591",
+      "page": "综合检索-国家代码显示",
+      "name": "LV → 拉脱维亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0592",
+      "page": "综合检索-国家代码显示",
+      "name": "LY → 利比亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0593",
+      "page": "综合检索-国家代码显示",
+      "name": "MA → 摩洛哥",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0594",
+      "page": "综合检索-国家代码显示",
+      "name": "MC → 摩纳哥",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0595",
+      "page": "综合检索-国家代码显示",
+      "name": "MD → 摩尔多瓦",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0596",
+      "page": "综合检索-国家代码显示",
+      "name": "ME → 黑山",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0597",
+      "page": "综合检索-国家代码显示",
+      "name": "MF → 法属圣马丁",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0598",
+      "page": "综合检索-国家代码显示",
+      "name": "MG → 马达加斯加",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0599",
+      "page": "综合检索-国家代码显示",
+      "name": "MH → 马绍尔群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0600",
+      "page": "综合检索-国家代码显示",
+      "name": "MK → 北马其顿",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0601",
+      "page": "综合检索-国家代码显示",
+      "name": "ML → 马里",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0602",
+      "page": "综合检索-国家代码显示",
+      "name": "MM → 缅甸",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0603",
+      "page": "综合检索-国家代码显示",
+      "name": "MN → 蒙古",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0604",
+      "page": "综合检索-国家代码显示",
+      "name": "MO → 澳门",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0605",
+      "page": "综合检索-国家代码显示",
+      "name": "MP → 北马里亚纳群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0606",
+      "page": "综合检索-国家代码显示",
+      "name": "MQ → 马提尼克",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0607",
+      "page": "综合检索-国家代码显示",
+      "name": "MR → 毛里塔尼亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0608",
+      "page": "综合检索-国家代码显示",
+      "name": "MS → 蒙特塞拉特",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0609",
+      "page": "综合检索-国家代码显示",
+      "name": "MT → 马耳他",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0610",
+      "page": "综合检索-国家代码显示",
+      "name": "MU → 毛里求斯",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0611",
+      "page": "综合检索-国家代码显示",
+      "name": "MV → 马尔代夫",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0612",
+      "page": "综合检索-国家代码显示",
+      "name": "MW → 马拉维",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0613",
+      "page": "综合检索-国家代码显示",
+      "name": "MX → 墨西哥",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0614",
+      "page": "综合检索-国家代码显示",
+      "name": "MY → 马来西亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0615",
+      "page": "综合检索-国家代码显示",
+      "name": "MZ → 莫桑比克",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0616",
+      "page": "综合检索-国家代码显示",
+      "name": "NA → 纳米比亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0617",
+      "page": "综合检索-国家代码显示",
+      "name": "NC → 新喀里多尼亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0618",
+      "page": "综合检索-国家代码显示",
+      "name": "NE → 尼日尔",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0619",
+      "page": "综合检索-国家代码显示",
+      "name": "NF → 诺福克岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0620",
+      "page": "综合检索-国家代码显示",
+      "name": "NG → 尼日利亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0621",
+      "page": "综合检索-国家代码显示",
+      "name": "NI → 尼加拉瓜",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0622",
+      "page": "综合检索-国家代码显示",
+      "name": "NL → 荷兰",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0623",
+      "page": "综合检索-国家代码显示",
+      "name": "NO → 挪威",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0624",
+      "page": "综合检索-国家代码显示",
+      "name": "NP → 尼泊尔",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0625",
+      "page": "综合检索-国家代码显示",
+      "name": "NR → 瑙鲁",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0626",
+      "page": "综合检索-国家代码显示",
+      "name": "NU → 纽埃",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0627",
+      "page": "综合检索-国家代码显示",
+      "name": "NZ → 新西兰",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0628",
+      "page": "综合检索-国家代码显示",
+      "name": "OM → 阿曼",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0629",
+      "page": "综合检索-国家代码显示",
+      "name": "PA → 巴拿马",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0630",
+      "page": "综合检索-国家代码显示",
+      "name": "PE → 秘鲁",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0631",
+      "page": "综合检索-国家代码显示",
+      "name": "PF → 法属波利尼西亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0632",
+      "page": "综合检索-国家代码显示",
+      "name": "PG → 巴布亚新几内亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0633",
+      "page": "综合检索-国家代码显示",
+      "name": "PH → 菲律宾",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0634",
+      "page": "综合检索-国家代码显示",
+      "name": "PK → 巴基斯坦",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0635",
+      "page": "综合检索-国家代码显示",
+      "name": "PL → 波兰",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0636",
+      "page": "综合检索-国家代码显示",
+      "name": "PM → 圣皮埃尔和密克隆",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0637",
+      "page": "综合检索-国家代码显示",
+      "name": "PN → 皮特凯恩群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0638",
+      "page": "综合检索-国家代码显示",
+      "name": "PR → 波多黎各",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0639",
+      "page": "综合检索-国家代码显示",
+      "name": "PS → 巴勒斯坦",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0640",
+      "page": "综合检索-国家代码显示",
+      "name": "PT → 葡萄牙",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0641",
+      "page": "综合检索-国家代码显示",
+      "name": "PW → 帕劳",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0642",
+      "page": "综合检索-国家代码显示",
+      "name": "PY → 巴拉圭",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0643",
+      "page": "综合检索-国家代码显示",
+      "name": "QA → 卡塔尔",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0644",
+      "page": "综合检索-国家代码显示",
+      "name": "RE → 留尼汪",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0645",
+      "page": "综合检索-国家代码显示",
+      "name": "RO → 罗马尼亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0646",
+      "page": "综合检索-国家代码显示",
+      "name": "RS → 塞尔维亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0647",
+      "page": "综合检索-国家代码显示",
+      "name": "RU → 俄罗斯",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0648",
+      "page": "综合检索-国家代码显示",
+      "name": "RW → 卢旺达",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0649",
+      "page": "综合检索-国家代码显示",
+      "name": "SA → 沙特阿拉伯",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0650",
+      "page": "综合检索-国家代码显示",
+      "name": "SB → 所罗门群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0651",
+      "page": "综合检索-国家代码显示",
+      "name": "SC → 塞舌尔",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0652",
+      "page": "综合检索-国家代码显示",
+      "name": "SD → 苏丹",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0653",
+      "page": "综合检索-国家代码显示",
+      "name": "SE → 瑞典",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0654",
+      "page": "综合检索-国家代码显示",
+      "name": "SG → 新加坡",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0655",
+      "page": "综合检索-国家代码显示",
+      "name": "SH → 圣赫勒拿",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0656",
+      "page": "综合检索-国家代码显示",
+      "name": "SI → 斯洛文尼亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0657",
+      "page": "综合检索-国家代码显示",
+      "name": "SJ → 斯瓦尔巴和扬马延",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0658",
+      "page": "综合检索-国家代码显示",
+      "name": "SK → 斯洛伐克",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0659",
+      "page": "综合检索-国家代码显示",
+      "name": "SL → 塞拉利昂",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0660",
+      "page": "综合检索-国家代码显示",
+      "name": "SM → 圣马力诺",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0661",
+      "page": "综合检索-国家代码显示",
+      "name": "SN → 塞内加尔",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0662",
+      "page": "综合检索-国家代码显示",
+      "name": "SO → 索马里",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0663",
+      "page": "综合检索-国家代码显示",
+      "name": "SR → 苏里南",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0664",
+      "page": "综合检索-国家代码显示",
+      "name": "SS → 南苏丹",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0665",
+      "page": "综合检索-国家代码显示",
+      "name": "ST → 圣多美和普林西比",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0666",
+      "page": "综合检索-国家代码显示",
+      "name": "SV → 萨尔瓦多",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0667",
+      "page": "综合检索-国家代码显示",
+      "name": "SX → 荷属圣马丁",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0668",
+      "page": "综合检索-国家代码显示",
+      "name": "SY → 叙利亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0669",
+      "page": "综合检索-国家代码显示",
+      "name": "SZ → 斯威士兰",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0670",
+      "page": "综合检索-国家代码显示",
+      "name": "TC → 特克斯和凯科斯群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0671",
+      "page": "综合检索-国家代码显示",
+      "name": "TD → 乍得",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0672",
+      "page": "综合检索-国家代码显示",
+      "name": "TF → 法属南部领地",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0673",
+      "page": "综合检索-国家代码显示",
+      "name": "TG → 多哥",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0674",
+      "page": "综合检索-国家代码显示",
+      "name": "TH → 泰国",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0675",
+      "page": "综合检索-国家代码显示",
+      "name": "TJ → 塔吉克斯坦",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0676",
+      "page": "综合检索-国家代码显示",
+      "name": "TK → 托克劳",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0677",
+      "page": "综合检索-国家代码显示",
+      "name": "TL → 东帝汶",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0678",
+      "page": "综合检索-国家代码显示",
+      "name": "TM → 土库曼斯坦",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0679",
+      "page": "综合检索-国家代码显示",
+      "name": "TN → 突尼斯",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0680",
+      "page": "综合检索-国家代码显示",
+      "name": "TO → 汤加",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0681",
+      "page": "综合检索-国家代码显示",
+      "name": "TR → 土耳其",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0682",
+      "page": "综合检索-国家代码显示",
+      "name": "TT → 特立尼达和多巴哥",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0683",
+      "page": "综合检索-国家代码显示",
+      "name": "TV → 图瓦卢",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0684",
+      "page": "综合检索-国家代码显示",
+      "name": "TW → 中国台湾",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0685",
+      "page": "综合检索-国家代码显示",
+      "name": "TZ → 坦桑尼亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0686",
+      "page": "综合检索-国家代码显示",
+      "name": "UA → 乌克兰",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0687",
+      "page": "综合检索-国家代码显示",
+      "name": "UG → 乌干达",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0688",
+      "page": "综合检索-国家代码显示",
+      "name": "UM → 美国本土外小岛屿",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0689",
+      "page": "综合检索-国家代码显示",
+      "name": "US → 美国",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0690",
+      "page": "综合检索-国家代码显示",
+      "name": "UY → 乌拉圭",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0691",
+      "page": "综合检索-国家代码显示",
+      "name": "UZ → 乌兹别克斯坦",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0692",
+      "page": "综合检索-国家代码显示",
+      "name": "VA → 梵蒂冈",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0693",
+      "page": "综合检索-国家代码显示",
+      "name": "VC → 圣文森特和格林纳丁斯",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0694",
+      "page": "综合检索-国家代码显示",
+      "name": "VE → 委内瑞拉",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0695",
+      "page": "综合检索-国家代码显示",
+      "name": "VG → 英属维尔京群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0696",
+      "page": "综合检索-国家代码显示",
+      "name": "VI → 美属维尔京群岛",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0697",
+      "page": "综合检索-国家代码显示",
+      "name": "VN → 越南",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0698",
+      "page": "综合检索-国家代码显示",
+      "name": "VU → 瓦努阿图",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0699",
+      "page": "综合检索-国家代码显示",
+      "name": "WF → 瓦利斯和富图纳",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0700",
+      "page": "综合检索-国家代码显示",
+      "name": "WS → 萨摩亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0701",
+      "page": "综合检索-国家代码显示",
+      "name": "YE → 也门",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0702",
+      "page": "综合检索-国家代码显示",
+      "name": "YT → 马约特",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0703",
+      "page": "综合检索-国家代码显示",
+      "name": "ZA → 南非",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0704",
+      "page": "综合检索-国家代码显示",
+      "name": "ZM → 赞比亚",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    },
+    {
+      "component": "FE-0705",
+      "page": "综合检索-国家代码显示",
+      "name": "ZW → 津巴布韦",
+      "status": "无法核验",
+      "reason": "本轮没有为每个国家/地区代码取得对应现场数据；字典定义不等于该行显示已验证",
+      "evidence": null
+    }
+  ],
+  "specific_verified_or_inapplicable_rows": [
+    {
+      "row": 808,
+      "component": "FE-0263",
+      "status": "不适用",
+      "reason": "关系网络/地图不是笛卡尔统计坐标图，不适用统计横纵轴语义场景",
+      "evidence": null
+    },
+    {
+      "row": 1024,
+      "component": "FE-0270",
+      "status": "不适用",
+      "reason": "关系网络/地图不是笛卡尔统计坐标图，不适用统计横纵轴语义场景",
+      "evidence": null
+    },
+    {
+      "row": 1376,
+      "component": "FE-0090",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；当前页为2且内容发生变化",
+      "evidence": "audit_results.json#CHK-0032"
+    },
+    {
+      "row": 1391,
+      "component": "FE-0090",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查当前页恢复为1",
+      "evidence": "audit_results.json#CHK-0033"
+    },
+    {
+      "row": 1429,
+      "component": "FE-0092",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查展开入口恢复",
+      "evidence": "audit_results.json#CHK-0035"
+    },
+    {
+      "row": 1443,
+      "component": "FE-0092",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查内容变化与收起按钮",
+      "evidence": "audit_results.json#CHK-0034"
+    },
+    {
+      "row": 1450,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1458,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1466,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1474,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1482,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1490,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1498,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1506,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1514,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1522,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1530,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1538,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1546,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1554,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1562,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1570,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1578,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1586,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1594,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1602,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1610,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1618,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1626,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1634,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1642,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1650,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1658,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1666,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1674,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1682,
+      "component": "FE-0346",
+      "status": "符合",
+      "reason": "本轮实际渲染的产业按钮包含此选项；仅验证选项文字，不代表筛选结果通过",
+      "evidence": "information.txt"
+    },
+    {
+      "row": 1713,
+      "component": "FE-0347",
+      "status": "符合",
+      "reason": "实际选择对应方向后可见日期顺序满足预期；对当前列表可见发布日期逐条检查顺序：['2024-04-17', '2024-04-07', '2024-04-04', '2024-04-03', '2024-04-01', '2024-04-01', '2024-03-29', '2024-03-29', '2024-03-28']",
+      "evidence": "sortcheck.json#CHK-0003"
+    },
+    {
+      "row": 1715,
+      "component": "FE-0347",
+      "status": "符合",
+      "reason": "实际选择对应方向后可见日期顺序满足预期；对当前列表可见发布日期逐条检查顺序：['2024-04-17', '2024-04-07', '2024-04-04', '2024-04-03', '2024-04-01', '2024-04-01', '2024-03-29', '2024-03-29', '2024-03-28']",
+      "evidence": "sortcheck.json#CHK-0003"
+    },
+    {
+      "row": 1716,
+      "component": "FE-0347",
+      "status": "符合",
+      "reason": "实际打开资讯排序下拉后看到本选项；仅验证文字",
+      "evidence": "sortcheck.json#CHK-0001"
+    },
+    {
+      "row": 1721,
+      "component": "FE-0347",
+      "status": "符合",
+      "reason": "实际选择对应方向后可见日期顺序满足预期；对当前列表可见发布日期逐条检查顺序：['2022-05-07', '2022-09-27', '2022-11-30', '2022-12-13', '2023-09-19', '2023-09-20', '2023-09-20', '2023-09-20', '2023-09-20', '2023-09-21']",
+      "evidence": "sortcheck.json#CHK-0002"
+    },
+    {
+      "row": 1723,
+      "component": "FE-0347",
+      "status": "符合",
+      "reason": "实际选择对应方向后可见日期顺序满足预期；对当前列表可见发布日期逐条检查顺序：['2022-05-07', '2022-09-27', '2022-11-30', '2022-12-13', '2023-09-19', '2023-09-20', '2023-09-20', '2023-09-20', '2023-09-20', '2023-09-21']",
+      "evidence": "sortcheck.json#CHK-0002"
+    },
+    {
+      "row": 1724,
+      "component": "FE-0347",
+      "status": "符合",
+      "reason": "实际打开资讯排序下拉后看到本选项；仅验证文字",
+      "evidence": "sortcheck.json#CHK-0001"
+    },
+    {
+      "row": 1748,
+      "component": "FE-0347",
+      "status": "符合",
+      "reason": "实际选择正序候选并核对当前日期序列",
+      "evidence": "sortcheck.json#CHK-0002"
+    },
+    {
+      "row": 1757,
+      "component": "FE-0425",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；当前未登录，仅验证访问限制展示",
+      "evidence": "audit_results.json#CHK-0041"
+    },
+    {
+      "row": 2109,
+      "component": "FE-0438",
+      "status": "不适用",
+      "reason": "关系网络/地图不是笛卡尔统计坐标图，不适用统计横纵轴语义场景",
+      "evidence": null
+    },
+    {
+      "row": 2602,
+      "component": "FE-0108",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；当前页为2且内容发生变化",
+      "evidence": "audit_results.json#CHK-0062"
+    },
+    {
+      "row": 2617,
+      "component": "FE-0108",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查当前页恢复为1",
+      "evidence": "audit_results.json#CHK-0063"
+    },
+    {
+      "row": 2632,
+      "component": "FE-0109",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "row": 2640,
+      "component": "FE-0109",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "row": 2648,
+      "component": "FE-0109",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "search-paper.txt"
+    },
+    {
+      "row": 3381,
+      "component": "FE-0022",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；当前页为2且内容发生变化",
+      "evidence": "audit_results.json#CHK-0003"
+    },
+    {
+      "row": 3396,
+      "component": "FE-0022",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查当前页恢复为1",
+      "evidence": "audit_results.json#CHK-0004"
+    },
+    {
+      "row": 3436,
+      "component": "FE-0024",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查展开入口恢复",
+      "evidence": "audit_results.json#CHK-0006"
+    },
+    {
+      "row": 3451,
+      "component": "FE-0024",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查内容变化与收起按钮",
+      "evidence": "audit_results.json#CHK-0005"
+    },
+    {
+      "row": 4674,
+      "component": "FE-0043",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；当前页为2且内容发生变化",
+      "evidence": "audit_results.json#CHK-0010"
+    },
+    {
+      "row": 4689,
+      "component": "FE-0043",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查当前页恢复为1",
+      "evidence": "audit_results.json#CHK-0011"
+    },
+    {
+      "row": 4729,
+      "component": "FE-0045",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查展开入口恢复",
+      "evidence": "audit_results.json#CHK-0013"
+    },
+    {
+      "row": 4744,
+      "component": "FE-0045",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查内容变化与收起按钮",
+      "evidence": "audit_results.json#CHK-0012"
+    },
+    {
+      "row": 5303,
+      "component": "FE-0217",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查展开入口恢复",
+      "evidence": "audit_results.json#CHK-0047"
+    },
+    {
+      "row": 5317,
+      "component": "FE-0217",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查内容变化与收起按钮",
+      "evidence": "audit_results.json#CHK-0046"
+    },
+    {
+      "row": 8860,
+      "component": "FE-0058",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；当前页为2且内容发生变化",
+      "evidence": "audit_results.json#CHK-0017"
+    },
+    {
+      "row": 8875,
+      "component": "FE-0058",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查当前页恢复为1",
+      "evidence": "audit_results.json#CHK-0018"
+    },
+    {
+      "row": 9273,
+      "component": "FE-0165",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；当前页为2且内容发生变化",
+      "evidence": "audit_results.json#CHK-0069"
+    },
+    {
+      "row": 9288,
+      "component": "FE-0165",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查当前页恢复为1",
+      "evidence": "audit_results.json#CHK-0070"
+    },
+    {
+      "row": 9303,
+      "component": "FE-0166",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "row": 9311,
+      "component": "FE-0166",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "row": 9319,
+      "component": "FE-0166",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "row": 9327,
+      "component": "FE-0166",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "search-scholar.txt"
+    },
+    {
+      "row": 10448,
+      "component": "FE-0236",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查展开入口恢复",
+      "evidence": "audit_results.json#CHK-0052"
+    },
+    {
+      "row": 10462,
+      "component": "FE-0236",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查内容变化与收起按钮",
+      "evidence": "audit_results.json#CHK-0051"
+    },
+    {
+      "row": 10853,
+      "component": "FE-0251",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；记录第二页真实页码与内容变化；详情证据保存为diagnose-scholar-page2.txt",
+      "evidence": "diagnosis.json#CHK-0001"
+    },
+    {
+      "row": 10868,
+      "component": "FE-0251",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查当前页恢复为1",
+      "evidence": "followups.json#CHK-0016"
+    },
+    {
+      "row": 10883,
+      "component": "FE-0252",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "row": 10891,
+      "component": "FE-0252",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "scholar-detail.txt"
+    },
+    {
+      "row": 11132,
+      "component": "FE-0273",
+      "status": "不适用",
+      "reason": "关系网络/地图不是笛卡尔统计坐标图，不适用统计横纵轴语义场景",
+      "evidence": null
+    },
+    {
+      "row": 11675,
+      "component": "FE-0069",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；当前页为2且内容发生变化",
+      "evidence": "audit_results.json#CHK-0022"
+    },
+    {
+      "row": 11690,
+      "component": "FE-0069",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查当前页恢复为1",
+      "evidence": "audit_results.json#CHK-0023"
+    },
+    {
+      "row": 12123,
+      "component": "FE-0297",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；当前页为2且内容发生变化",
+      "evidence": "followups.json#CHK-0004"
+    },
+    {
+      "row": 12138,
+      "component": "FE-0297",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查当前页恢复为1",
+      "evidence": "followups.json#CHK-0005"
+    },
+    {
+      "row": 12153,
+      "component": "FE-0298",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "row": 12161,
+      "component": "FE-0298",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "journal-detail.txt"
+    },
+    {
+      "row": 12990,
+      "component": "FE-0078",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；当前页为2且内容发生变化",
+      "evidence": "audit_results.json#CHK-0027"
+    },
+    {
+      "row": 13005,
+      "component": "FE-0078",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；检查当前页恢复为1",
+      "evidence": "audit_results.json#CHK-0028"
+    },
+    {
+      "row": 13557,
+      "component": "FE-0337",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "row": 13565,
+      "component": "FE-0337",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "row": 13573,
+      "component": "FE-0337",
+      "status": "符合",
+      "reason": "本轮对应排序区实际显示此候选；未据此认定排序执行结果正确",
+      "evidence": "organization-detail.txt"
+    },
+    {
+      "row": 14692,
+      "component": "FE-0400",
+      "status": "符合",
+      "reason": "本轮执行与本行关键预期一致；当前未登录，仅验证访问限制展示",
+      "evidence": "audit_results.json#CHK-0041"
+    }
+  ],
+  "corrections": [
+    "学者详情分页初测等待不足，复核实际页码2且内容变化，覆盖原失败",
+    "期刊和机构统计初测只读POST识别不足，修正实验读取后复核完成",
+    "职业迁徙跳转统一认证，未登录及SSO未加载，不认定网站弹窗缺陷"
+  ],
+  "evidence_files": [
+    "aggregate-paper.txt",
+    "aggregate-patent.txt",
+    "aggregate-scholar.txt",
+    "diagnose-scholar-before.txt",
+    "diagnose-scholar-page2.txt",
+    "follow-industry-人工智能.txt",
+    "follow-industry-新材料.txt",
+    "follow-information-subscription.txt",
+    "follow-journal-detail.txt",
+    "follow-journal.txt",
+    "follow-organization-detail.txt",
+    "follow-paper-subscription.txt",
+    "follow-scholar.txt",
+    "home.txt",
+    "information-sort-options.txt",
+    "information-sort_asc.txt",
+    "information-sort_desc.txt",
+    "information.txt",
+    "journal-detail.txt",
+    "journal.txt",
+    "migration.txt",
+    "organization-detail.txt",
+    "organization.txt",
+    "paper-detail.txt",
+    "paper-参考文献.txt",
+    "paper-被引文献.txt",
+    "paper.txt",
+    "patent-detail.txt",
+    "patent.txt",
+    "query-information.txt",
+    "query-journal.txt",
+    "query-organization.txt",
+    "query-paper.txt",
+    "query-patent.txt",
+    "query-scholar.txt",
+    "scholar-detail.txt",
+    "scholar.txt",
+    "search-paper-filtered.txt",
+    "search-paper.txt",
+    "search-patent-filtered.txt",
+    "search-patent.txt",
+    "search-scholar-filtered.txt",
+    "search-scholar.txt"
+  ]
+}
