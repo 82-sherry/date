@@ -101,9 +101,18 @@
   "all_status": "符合（实际可见存在）",
   "scope": "实际公开用户端；排除数据社区；按分类与排序重复保留；不是独立业务功能计数或后台验证",
   "source_errors": [],
-  "col_count": 11,
+  "col_count": 12,
   "sheet_count": 1,
   "source_point_count": 49950,
   "removed_point_count": 34565,
-  "selection_policy": "同状态同区域同类型同文案去重；各观察状态均衡保留；优先控件、输入、文字、数值、图标与字段组合，降低公共导航、长正文组合、符号及数字片段优先级。跨分类和排序的必要重复保留。"
+  "selection_policy": "同状态同区域同类型同文案去重；各观察状态均衡保留；优先控件、输入、文字、数值、图标与字段组合，降低公共导航、长正文组合、符号及数字片段优先级。跨分类和排序的必要重复保留。",
+  "source_requirement_rows": 78,
+  "unsplit_requirement_rows": 66,
+  "total_data_rows": 15451,
+  "original_columns_preserved": "A-I",
+  "appended_columns": [
+    "子功能点",
+    "页面支持情况及位置",
+    "符合程度"
+  ]
 }
