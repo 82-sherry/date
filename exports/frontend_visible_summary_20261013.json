@@ -1,18 +1,21 @@
 {
   "source_requirement_rows": 78,
-  "module_counts": {
-    "科技情报获取": 623,
-    "信息预处理": 303,
-    "智能化分析": 12221,
-    "智能服务支撑": 2111,
-    "科技情报挖掘与知识服务数据需求": 127
+  "visible_subfunctions": 14512,
+  "yellow_blank_requirements": 71,
+  "total_data_rows": 14583,
+  "module_point_counts": {
+    "智能服务支撑": 14512
   },
-  "status_counts": {
-    "待核验": 928,
-    "符合": 14457
+  "module_yellow_requirement_counts": {
+    "科技情报获取": 10,
+    "信息预处理": 6,
+    "智能化分析": 3,
+    "智能服务支撑": 4,
+    "科技情报挖掘与知识服务数据需求": 48
   },
-  "point_count": 15385,
-  "sheet_count": 1,
-  "col_count": 11,
-  "original_requirement_columns": "B-H exact original values; A is continuous subfunction sequence; original remarks included in J where present"
+  "excluded_observation_counts": {
+    "首页公共导航不作为具体业务功能证据": 75,
+    "重复公共导航不作为当前需规证据": 798
+  },
+  "verification_scope": "依据已有实际页面采集核对展示存在及需规归属；不代表后台处理或未执行操作通过。公开前端无法核验的需规I-K空白、整行黄色。"
 }
