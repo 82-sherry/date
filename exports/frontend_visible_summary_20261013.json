@@ -1,10 +1,10 @@
 {
   "source_requirement_rows": 78,
-  "visible_subfunctions": 14512,
+  "visible_subfunctions": 15385,
   "yellow_blank_requirements": 71,
-  "total_data_rows": 14583,
+  "total_data_rows": 15456,
   "module_point_counts": {
-    "智能服务支撑": 14512
+    "智能服务支撑": 15385
   },
   "module_yellow_requirement_counts": {
     "科技情报获取": 10,
