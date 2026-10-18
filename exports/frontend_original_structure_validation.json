@@ -1,7 +1,7 @@
 {
   "source_requirement_rows": 78,
   "visible_subfunctions": 15314,
-  "yellow_blank_requirements": 71,
+  "yellow_blank_requirements": 0,
   "total_data_rows": 15385,
   "module_point_counts": {
     "智能服务支撑": 15314
@@ -23,134 +23,252 @@
       "source_requirement_row": 3,
       "requirement_id": 1,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 3
+      "yellow_blank": false,
+      "excel_row": 3,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        95,
+        100,
+        101
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 4,
       "requirement_id": 2,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 4
+      "yellow_blank": false,
+      "excel_row": 4,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        1128,
+        1131,
+        1135
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 5,
       "requirement_id": 3,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 5
+      "yellow_blank": false,
+      "excel_row": 5,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        92,
+        1125
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 6,
       "requirement_id": 4,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 6
+      "yellow_blank": false,
+      "excel_row": 6,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        95,
+        96,
+        100
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 7,
       "requirement_id": 5,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 7
+      "yellow_blank": false,
+      "excel_row": 7,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        1128,
+        1131,
+        1135
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 8,
       "requirement_id": 6,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 8
+      "yellow_blank": false,
+      "excel_row": 8,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        2440,
+        2443,
+        2448
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 9,
       "requirement_id": 7,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 9
+      "yellow_blank": false,
+      "excel_row": 9,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        5896,
+        5924
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 10,
       "requirement_id": 8,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 10
+      "yellow_blank": false,
+      "excel_row": 10,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3236,
+        3247
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 11,
       "requirement_id": 9,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 11
+      "yellow_blank": false,
+      "excel_row": 11,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3649,
+        3652,
+        3655
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 12,
       "requirement_id": 10,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 12
+      "yellow_blank": false,
+      "excel_row": 12,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        5896,
+        5924
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 13,
       "requirement_id": 11,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 13
+      "yellow_blank": false,
+      "excel_row": 13,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        92,
+        115
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 14,
       "requirement_id": 12,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 14
+      "yellow_blank": false,
+      "excel_row": 14,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        6064
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 15,
       "requirement_id": 13,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15
+      "yellow_blank": false,
+      "excel_row": 15,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        104
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 16,
       "requirement_id": 14,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 16
+      "yellow_blank": false,
+      "excel_row": 16,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        4556,
+        4560
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 17,
       "requirement_id": 15,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 17
+      "yellow_blank": false,
+      "excel_row": 17,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        2440,
+        4560
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 18,
       "requirement_id": 16,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 18
+      "yellow_blank": false,
+      "excel_row": 18,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        115
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 19,
       "requirement_id": 17,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 19
+      "yellow_blank": false,
+      "excel_row": 19,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        4638,
+        4639,
+        4640
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 20,
       "requirement_id": 18,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 20
+      "yellow_blank": false,
+      "excel_row": 20,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        5896,
+        5885
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 21,
       "requirement_id": 19,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 21
+      "yellow_blank": false,
+      "excel_row": 21,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        4638,
+        4639
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "excel_row": 22,
@@ -9460,8 +9578,13 @@
       "source_requirement_row": 26,
       "requirement_id": 24,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 1172
+      "yellow_blank": false,
+      "excel_row": 1172,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        4626
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "excel_row": 1173,
@@ -15947,8 +16070,13 @@
       "source_requirement_row": 29,
       "requirement_id": 27,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 1970
+      "yellow_blank": false,
+      "excel_row": 1970,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        91
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "excel_row": 1971,
@@ -124286,351 +124414,654 @@
       "source_requirement_row": 31,
       "requirement_id": 29,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15338
+      "yellow_blank": false,
+      "excel_row": 15338,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        5896,
+        5924
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 32,
       "requirement_id": 30,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15339
+      "yellow_blank": false,
+      "excel_row": 15339,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        104
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 39,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15340
+      "yellow_blank": false,
+      "excel_row": 15340,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        95
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 40,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15341
+      "yellow_blank": false,
+      "excel_row": 15341,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        95
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 41,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15342
+      "yellow_blank": false,
+      "excel_row": 15342,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        95,
+        96,
+        100,
+        101
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 42,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15343
+      "yellow_blank": false,
+      "excel_row": 15343,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        95,
+        96,
+        100,
+        101
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 43,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15344
+      "yellow_blank": false,
+      "excel_row": 15344,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        95,
+        96
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 44,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15345
+      "yellow_blank": false,
+      "excel_row": 15345,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        1128
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 45,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15346
+      "yellow_blank": false,
+      "excel_row": 15346,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        1128
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 46,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15347
+      "yellow_blank": false,
+      "excel_row": 15347,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        1129,
+        1131,
+        1133,
+        1135
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 47,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15348
+      "yellow_blank": false,
+      "excel_row": 15348,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        1129,
+        1131,
+        1133,
+        1135
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 48,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15349
+      "yellow_blank": false,
+      "excel_row": 15349,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        1129,
+        1131
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 49,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15350
+      "yellow_blank": false,
+      "excel_row": 15350,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        5896
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 50,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15351
+      "yellow_blank": false,
+      "excel_row": 15351,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        5896
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 51,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15352
+      "yellow_blank": false,
+      "excel_row": 15352,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        5896,
+        5924
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 52,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15353
+      "yellow_blank": false,
+      "excel_row": 15353,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        5896,
+        5924
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 53,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15354
+      "yellow_blank": false,
+      "excel_row": 15354,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        5896,
+        5924
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 54,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15355
+      "yellow_blank": false,
+      "excel_row": 15355,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        2440
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 55,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15356
+      "yellow_blank": false,
+      "excel_row": 15356,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        2440
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 56,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15357
+      "yellow_blank": false,
+      "excel_row": 15357,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        2440,
+        2443,
+        2448,
+        2454
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 57,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15358
+      "yellow_blank": false,
+      "excel_row": 15358,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        2440,
+        2443,
+        2448,
+        2454
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 58,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15359
+      "yellow_blank": false,
+      "excel_row": 15359,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        2440,
+        2443
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 59,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15360
+      "yellow_blank": false,
+      "excel_row": 15360,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3236
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 60,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15361
+      "yellow_blank": false,
+      "excel_row": 15361,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3236
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 61,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15362
+      "yellow_blank": false,
+      "excel_row": 15362,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3236,
+        3247
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 62,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15363
+      "yellow_blank": false,
+      "excel_row": 15363,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3236,
+        3247
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 63,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15364
+      "yellow_blank": false,
+      "excel_row": 15364,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3236,
+        3247
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 64,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15365
+      "yellow_blank": false,
+      "excel_row": 15365,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3649
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 65,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15366
+      "yellow_blank": false,
+      "excel_row": 15366,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3649
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 66,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15367
+      "yellow_blank": false,
+      "excel_row": 15367,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3649,
+        3652,
+        3655,
+        3658
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 67,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15368
+      "yellow_blank": false,
+      "excel_row": 15368,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3649,
+        3652,
+        3655,
+        3658
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 68,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15369
+      "yellow_blank": false,
+      "excel_row": 15369,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3649,
+        3652
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 69,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15370
+      "yellow_blank": false,
+      "excel_row": 15370,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        95
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 70,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15371
+      "yellow_blank": false,
+      "excel_row": 15371,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        92
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 71,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15372
+      "yellow_blank": false,
+      "excel_row": 15372,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        95,
+        96,
+        100,
+        101
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 72,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15373
+      "yellow_blank": false,
+      "excel_row": 15373,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        95
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 73,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15374
+      "yellow_blank": false,
+      "excel_row": 15374,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        92
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 74,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15375
+      "yellow_blank": false,
+      "excel_row": 15375,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        95,
+        96,
+        100,
+        101
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 75,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15376
+      "yellow_blank": false,
+      "excel_row": 15376,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        1128
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 76,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15377
+      "yellow_blank": false,
+      "excel_row": 15377,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        1125
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 77,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15378
+      "yellow_blank": false,
+      "excel_row": 15378,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        1129,
+        1131,
+        1133,
+        1135
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 78,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15379
+      "yellow_blank": false,
+      "excel_row": 15379,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3649
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 79,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15380
+      "yellow_blank": false,
+      "excel_row": 15380,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3646
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 80,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15381
+      "yellow_blank": false,
+      "excel_row": 15381,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3649,
+        3652,
+        3655,
+        3658
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 81,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15382
+      "yellow_blank": false,
+      "excel_row": 15382,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3649
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 82,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15383
+      "yellow_blank": false,
+      "excel_row": 15383,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3646
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 83,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15384
+      "yellow_blank": false,
+      "excel_row": 15384,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        3649,
+        3652,
+        3655,
+        3658
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 84,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15385
+      "yellow_blank": false,
+      "excel_row": 15385,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        2440
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 85,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15386
+      "yellow_blank": false,
+      "excel_row": 15386,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        2436
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     },
     {
       "source_requirement_row": 86,
       "requirement_id": null,
       "observed_point_number": null,
-      "yellow_blank": true,
-      "excel_row": 15387
+      "yellow_blank": false,
+      "excel_row": 15387,
+      "yellow_partial": true,
+      "related_observation_numbers": [
+        2440,
+        2443,
+        2448,
+        2454
+      ],
+      "related_evidence_file": "frontend_related_requirement_evidence_71.json"
     }
   ],
   "columns": [
@@ -124648,5 +125079,7 @@
     "符合程度"
   ],
   "layout": "原需规H→页面I→功能点J→功能点需求描述K→符合程度L",
-  "target_count_includes_yellow_blank_rows": true
+  "target_count_includes_yellow_blank_rows": true,
+  "yellow_partial_requirements": 71,
+  "filled_data_rows": 15385
 }

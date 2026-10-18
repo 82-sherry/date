@@ -1,7 +1,7 @@
 {
   "source_requirement_rows": 78,
   "visible_subfunctions": 15314,
-  "yellow_blank_requirements": 71,
+  "yellow_blank_requirements": 0,
   "total_data_rows": 15385,
   "module_point_counts": {
     "智能服务支撑": 15314
@@ -33,5 +33,7 @@
     "符合程度"
   ],
   "layout": "原需规H→页面I→功能点J→功能点需求描述K→符合程度L",
-  "target_count_includes_yellow_blank_rows": true
+  "target_count_includes_yellow_blank_rows": true,
+  "yellow_partial_requirements": 71,
+  "filled_data_rows": 15385
 }
