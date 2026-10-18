@@ -35,5 +35,6 @@
   "layout": "原需规H→页面I→功能点J→功能点需求描述K→符合程度L",
   "target_count_includes_yellow_blank_rows": true,
   "yellow_partial_requirements": 71,
-  "filled_data_rows": 15385
+  "filled_data_rows": 15385,
+  "description_style": "功能点仅使用展示名称；功能点需求描述仅保留页面、进入方式、位置和实际可见内容；原需规、颜色与符合程度不变。"
 }
