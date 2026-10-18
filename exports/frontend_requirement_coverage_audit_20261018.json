@@ -1,0 +1,648 @@
+{
+  "date": "2026-10-18",
+  "data_rows": 15385,
+  "source_requirement_rows": 78,
+  "modules": 5,
+  "original_text_mismatches": 0,
+  "excluded_community_source_rows": [
+    33,
+    34,
+    35,
+    36,
+    37,
+    38
+  ],
+  "represented_source_rows": 78,
+  "source_rows_with_single_related_point": 71,
+  "source_rows_with_multiple_points": 7,
+  "fully_covered_requirements_proven": 0,
+  "technology_news_recommendation_rows": 13367,
+  "coverage_conclusion": "数量和原文保留通过；不能认定全部需规要求已被现有功能点完整覆盖。",
+  "scope": "本轮为原需规、现有拆解表及既有页面证据的覆盖校对，不是新一轮线上全功能操作验收。",
+  "findings": [
+    {
+      "source_requirement_row": 3,
+      "module": "科技情报获取",
+      "requirement_id": 1,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "批量加工、3亿论文规模、定时入库、字段标准化和归档流程未由字段展示证明。"
+    },
+    {
+      "source_requirement_row": 4,
+      "module": "科技情报获取",
+      "requirement_id": 2,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "1亿专利规模、批量加工、定时同步及数据校验流程未由字段展示证明。"
+    },
+    {
+      "source_requirement_row": 5,
+      "module": "科技情报获取",
+      "requirement_id": 3,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "插件接入、任务与周期配置、手动触发、入库规则及同步结果未覆盖。"
+    },
+    {
+      "source_requirement_row": 6,
+      "module": "科技情报获取",
+      "requirement_id": 4,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "后台添加、编辑、删除、动态作者字段、必填校验及操作反馈未覆盖。"
+    },
+    {
+      "source_requirement_row": 7,
+      "module": "科技情报获取",
+      "requirement_id": 5,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "后台添加、编辑、删除、动态字段、校验及操作反馈未覆盖。"
+    },
+    {
+      "source_requirement_row": 8,
+      "module": "科技情报获取",
+      "requirement_id": 6,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "后台学者增删改、动态字段、校验及提交反馈未覆盖。"
+    },
+    {
+      "source_requirement_row": 9,
+      "module": "科技情报获取",
+      "requirement_id": 7,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "后台资讯增删改、字段录入、校验及提交反馈未覆盖。"
+    },
+    {
+      "source_requirement_row": 10,
+      "module": "科技情报获取",
+      "requirement_id": 8,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "后台期刊增删改、字段录入、校验及提交反馈未覆盖。"
+    },
+    {
+      "source_requirement_row": 11,
+      "module": "科技情报获取",
+      "requirement_id": 9,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "后台机构增删改、字段录入、校验及提交反馈未覆盖。"
+    },
+    {
+      "source_requirement_row": 12,
+      "module": "科技情报获取",
+      "requirement_id": 10,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "资讯采集、200万规模、加工、自动同步与定时入库未覆盖。"
+    },
+    {
+      "source_requirement_row": 13,
+      "module": "信息预处理",
+      "requirement_id": 11,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "入库前不完整、重复及低相关数据的自动识别、筛除和质量提升未覆盖。"
+    },
+    {
+      "source_requirement_row": 14,
+      "module": "信息预处理",
+      "requirement_id": 12,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "批量异步翻译、多语种互译、术语表、核心字段翻译结果未由入口展示证明。"
+    },
+    {
+      "source_requirement_row": 15,
+      "module": "信息预处理",
+      "requirement_id": 13,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "多模态文件解析、图表与公式提取、语义对齐的实际结果未覆盖。"
+    },
+    {
+      "source_requirement_row": 16,
+      "module": "信息预处理",
+      "requirement_id": 14,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "国家地区、语言、性别的批量抽取、规范录入及处理质量未覆盖。"
+    },
+    {
+      "source_requirement_row": 17,
+      "module": "信息预处理",
+      "requirement_id": 15,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "冷启动消歧、增量消歧、关系纠错、规模与准确性未由姓名展示证明。"
+    },
+    {
+      "source_requirement_row": 18,
+      "module": "信息预处理",
+      "requirement_id": 16,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "关键词自动抽取、概念属性与标签生成、智能标注过程未由关键词展示证明。"
+    },
+    {
+      "source_requirement_row": 19,
+      "module": "智能化分析",
+      "requirement_id": 17,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "合作关系栏目存在；隐含关系挖掘、机构合作与论文引用关系的处理效果尚无完整对应。"
+    },
+    {
+      "source_requirement_row": 20,
+      "module": "智能化分析",
+      "requirement_id": 18,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "分类和列表可见；关键词检索效果、事件合并和内容概要等具体要求尚无完整对应。"
+    },
+    {
+      "source_requirement_row": 21,
+      "module": "智能化分析",
+      "requirement_id": 19,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "当前仅学者合作栏目，不能覆盖目标论文的多层引用网络、网络编码及分析计算。"
+    },
+    {
+      "source_requirement_row": 22,
+      "module": "智能服务支撑",
+      "requirement_id": 20,
+      "point_count": 351,
+      "conclusion": "有多项页面拆解，完整覆盖未证实",
+      "gap": "已有论文列表及字段拆解；标题/关键词/作者/DOI/EISSN检索结果、期刊机构聚合与时间筛选行为未逐项证明。"
+    },
+    {
+      "source_requirement_row": 23,
+      "module": "智能服务支撑",
+      "requirement_id": 21,
+      "point_count": 382,
+      "conclusion": "有多项页面拆解，完整覆盖未证实",
+      "gap": "已有专利列表和详情拆解；按需规各条件检索、组合筛选及结果更新行为未逐项证明。"
+    },
+    {
+      "source_requirement_row": 24,
+      "module": "智能服务支撑",
+      "requirement_id": 22,
+      "point_count": 213,
+      "conclusion": "有多项页面拆解，完整覆盖未证实",
+      "gap": "已有学者列表与指标拆解；检索、筛选和排序等行为应逐项关联需规，静态展示不足以证明全部要求。"
+    },
+    {
+      "source_requirement_row": 25,
+      "module": "智能服务支撑",
+      "requirement_id": 23,
+      "point_count": 204,
+      "conclusion": "有多项页面拆解，完整覆盖未证实",
+      "gap": "已有学者资料、趋势与合作区域拆解；分析交互、数据关联与全部需规指标未形成逐项验证。"
+    },
+    {
+      "source_requirement_row": 26,
+      "module": "智能服务支撑",
+      "requirement_id": 24,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅年度发文趋势相关展示，不能代替按研究领域的热度变化与时间段选择。"
+    },
+    {
+      "source_requirement_row": 27,
+      "module": "智能服务支撑",
+      "requirement_id": 25,
+      "point_count": 397,
+      "conclusion": "有多项页面拆解，完整覆盖未证实",
+      "gap": "期刊列表和详情展示已拆解；国家地区、机构、研究主题、高引作者、高产作者五类排行及筛选、排序、导出未逐项证明。"
+    },
+    {
+      "source_requirement_row": 28,
+      "module": "智能服务支撑",
+      "requirement_id": 26,
+      "point_count": 400,
+      "conclusion": "有多项页面拆解，完整覆盖未证实",
+      "gap": "机构列表和详情展示已拆解；机构内学者发文排行、引用排行、筛选、导出及学者跳转未逐项证明。"
+    },
+    {
+      "source_requirement_row": 29,
+      "module": "智能服务支撑",
+      "requirement_id": 27,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅我的订阅入口，不能证明标签自定义、订阅保存与基于兴趣的更新推荐。"
+    },
+    {
+      "source_requirement_row": 30,
+      "module": "智能服务支撑",
+      "requirement_id": 28,
+      "point_count": 13367,
+      "conclusion": "有多项页面拆解，完整覆盖未证实",
+      "gap": "分类、排序状态和资讯内容细分很多；自定义订阅标签、兴趣画像、个性化推荐、热点融合、事件去重合并与摘要凝练尚无完整对应，重复展示不能代替流程覆盖。"
+    },
+    {
+      "source_requirement_row": 31,
+      "module": "智能服务支撑",
+      "requirement_id": 29,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "只有资讯及摘要展示；同事件识别、去重合并、多来源汇聚与排序效果未覆盖。"
+    },
+    {
+      "source_requirement_row": 32,
+      "module": "智能服务支撑",
+      "requirement_id": 30,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "已有摘要展示；上传论文全文后的摘要、作者介绍、图片、表格及关键问题提取，以及原文章节顺序和结构保留未覆盖。"
+    },
+    {
+      "source_requirement_row": 39,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "只关联列表或实体字段，场景中的解析、抽取、引用关系、合作网络等能力未逐项映射。"
+    },
+    {
+      "source_requirement_row": 40,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "单个实体示例不能证明原文列举的全部数据类型和来源均已覆盖。"
+    },
+    {
+      "source_requirement_row": 41,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅基础字段关联；数据获取、处理、关联分析及原文要求的完整内容未逐项映射。"
+    },
+    {
+      "source_requirement_row": 42,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅列出少量基础展示字段，原文要求的全部字段、字段关联及数据完整性未逐项映射。"
+    },
+    {
+      "source_requirement_row": 43,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "原文规定的实体ID关联、数量门槛或其他约束，不能由基础字段展示证明。"
+    },
+    {
+      "source_requirement_row": 44,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "只关联列表或实体字段，场景中的解析、抽取、引用关系、合作网络等能力未逐项映射。"
+    },
+    {
+      "source_requirement_row": 45,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "单个实体示例不能证明原文列举的全部数据类型和来源均已覆盖。"
+    },
+    {
+      "source_requirement_row": 46,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅基础字段关联；数据获取、处理、关联分析及原文要求的完整内容未逐项映射。"
+    },
+    {
+      "source_requirement_row": 47,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅列出少量基础展示字段，原文要求的全部字段、字段关联及数据完整性未逐项映射。"
+    },
+    {
+      "source_requirement_row": 48,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "原文规定的实体ID关联、数量门槛或其他约束，不能由基础字段展示证明。"
+    },
+    {
+      "source_requirement_row": 49,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "只关联列表或实体字段，场景中的解析、抽取、引用关系、合作网络等能力未逐项映射。"
+    },
+    {
+      "source_requirement_row": 50,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "单个实体示例不能证明原文列举的全部数据类型和来源均已覆盖。"
+    },
+    {
+      "source_requirement_row": 51,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅基础字段关联；数据获取、处理、关联分析及原文要求的完整内容未逐项映射。"
+    },
+    {
+      "source_requirement_row": 52,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅列出少量基础展示字段，原文要求的全部字段、字段关联及数据完整性未逐项映射。"
+    },
+    {
+      "source_requirement_row": 53,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "原文规定的实体ID关联、数量门槛或其他约束，不能由基础字段展示证明。"
+    },
+    {
+      "source_requirement_row": 54,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "只关联列表或实体字段，场景中的解析、抽取、引用关系、合作网络等能力未逐项映射。"
+    },
+    {
+      "source_requirement_row": 55,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "单个实体示例不能证明原文列举的全部数据类型和来源均已覆盖。"
+    },
+    {
+      "source_requirement_row": 56,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅基础字段关联；数据获取、处理、关联分析及原文要求的完整内容未逐项映射。"
+    },
+    {
+      "source_requirement_row": 57,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅列出少量基础展示字段，原文要求的全部字段、字段关联及数据完整性未逐项映射。"
+    },
+    {
+      "source_requirement_row": 58,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "原文规定的实体ID关联、数量门槛或其他约束，不能由基础字段展示证明。"
+    },
+    {
+      "source_requirement_row": 59,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "只关联列表或实体字段，场景中的解析、抽取、引用关系、合作网络等能力未逐项映射。"
+    },
+    {
+      "source_requirement_row": 60,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "单个实体示例不能证明原文列举的全部数据类型和来源均已覆盖。"
+    },
+    {
+      "source_requirement_row": 61,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅基础字段关联；数据获取、处理、关联分析及原文要求的完整内容未逐项映射。"
+    },
+    {
+      "source_requirement_row": 62,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅列出少量基础展示字段，原文要求的全部字段、字段关联及数据完整性未逐项映射。"
+    },
+    {
+      "source_requirement_row": 63,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "原文规定的实体ID关联、数量门槛或其他约束，不能由基础字段展示证明。"
+    },
+    {
+      "source_requirement_row": 64,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "只关联列表或实体字段，场景中的解析、抽取、引用关系、合作网络等能力未逐项映射。"
+    },
+    {
+      "source_requirement_row": 65,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "单个实体示例不能证明原文列举的全部数据类型和来源均已覆盖。"
+    },
+    {
+      "source_requirement_row": 66,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅基础字段关联；数据获取、处理、关联分析及原文要求的完整内容未逐项映射。"
+    },
+    {
+      "source_requirement_row": 67,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅列出少量基础展示字段，原文要求的全部字段、字段关联及数据完整性未逐项映射。"
+    },
+    {
+      "source_requirement_row": 68,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "原文规定的实体ID关联、数量门槛或其他约束，不能由基础字段展示证明。"
+    },
+    {
+      "source_requirement_row": 69,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "示例实体展示只提供关联；数据定义中的对象范围、属性与关系尚未逐项映射。"
+    },
+    {
+      "source_requirement_row": 70,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "当前列表计数不能证明所要求的地域范围、数据规模、更新时限与更新频率。"
+    },
+    {
+      "source_requirement_row": 71,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅列出少量基础展示字段，原文要求的全部字段、字段关联及数据完整性未逐项映射。"
+    },
+    {
+      "source_requirement_row": 72,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "示例实体展示只提供关联；数据定义中的对象范围、属性与关系尚未逐项映射。"
+    },
+    {
+      "source_requirement_row": 73,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "当前列表计数不能证明所要求的地域范围、数据规模、更新时限与更新频率。"
+    },
+    {
+      "source_requirement_row": 74,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅列出少量基础展示字段，原文要求的全部字段、字段关联及数据完整性未逐项映射。"
+    },
+    {
+      "source_requirement_row": 75,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "示例实体展示只提供关联；数据定义中的对象范围、属性与关系尚未逐项映射。"
+    },
+    {
+      "source_requirement_row": 76,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "当前列表计数不能证明所要求的地域范围、数据规模、更新时限与更新频率。"
+    },
+    {
+      "source_requirement_row": 77,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅列出少量基础展示字段，原文要求的全部字段、字段关联及数据完整性未逐项映射。"
+    },
+    {
+      "source_requirement_row": 78,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "示例实体展示只提供关联；数据定义中的对象范围、属性与关系尚未逐项映射。"
+    },
+    {
+      "source_requirement_row": 79,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "当前列表计数不能证明所要求的地域范围、数据规模、更新时限与更新频率。"
+    },
+    {
+      "source_requirement_row": 80,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅列出少量基础展示字段，原文要求的全部字段、字段关联及数据完整性未逐项映射。"
+    },
+    {
+      "source_requirement_row": 81,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "示例实体展示只提供关联；数据定义中的对象范围、属性与关系尚未逐项映射。"
+    },
+    {
+      "source_requirement_row": 82,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "当前列表计数不能证明所要求的地域范围、数据规模、更新时限与更新频率。"
+    },
+    {
+      "source_requirement_row": 83,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅列出少量基础展示字段，原文要求的全部字段、字段关联及数据完整性未逐项映射。"
+    },
+    {
+      "source_requirement_row": 84,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "示例实体展示只提供关联；数据定义中的对象范围、属性与关系尚未逐项映射。"
+    },
+    {
+      "source_requirement_row": 85,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "当前列表计数不能证明所要求的地域范围、数据规模、更新时限与更新频率。"
+    },
+    {
+      "source_requirement_row": 86,
+      "module": "科技情报挖掘与知识服务数据需求",
+      "requirement_id": null,
+      "point_count": 1,
+      "conclusion": "仅有相关展示，完整覆盖未证实",
+      "gap": "仅列出少量基础展示字段，原文要求的全部字段、字段关联及数据完整性未逐项映射。"
+    }
+  ]
+}
